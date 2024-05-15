@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mon Portfolio</title>
+    <style>
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="portfolio">
+        <div class="projects-container">
+            <div class="project-card"> <!-- Projet 1 -->
+                test1
+            </div>
+            <div class="project-card"> <!-- Projet 2 -->
+                test2
+            </div>
+            <div class="project-card"> <!-- Projet 3 -->
+                test4
+            </div>
+            <div class="project-card"> <!-- Projet 1 -->
+                test4
+            </div>
+            <div class="project-card"> <!-- Projet 2 -->
+                test5
+            </div>
+            <div class="project-card"> <!-- Projet 3 -->
+                test6
+            </div>
+            <!-- Répéter pour chaque groupe de 3 projets -->
+        </div>
+        <div class="navigation">
+            <button class="prev-btn">Précédent</button>
+            <button class="next-btn">Suivant</button>
+        </div>
+    </div>
+    <script>
+        const projectsContainer = document.querySelector('.projects-container');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+let projectIndex = 0;
+
+prevBtn.addEventListener('click', () => {
+    projectIndex = Math.max(projectIndex - 3, 0);
+    updateProjects();
+});
+
+nextBtn.addEventListener('click', () => {
+    projectIndex = Math.min(projectIndex + 3, projectsContainer.children.length - 3);
+    updateProjects();
+});
+
+function updateProjects() {
+    for (let i = 0; i < projectsContainer.children.length; i++) {
+        projectsContainer.children[i].style.display = 'none';
+    }
+
+    for (let i = projectIndex; i < projectIndex + 3; i++) {
+        if (projectsContainer.children[i]) {
+            projectsContainer.children[i].style.display = 'block';
+        }
+    }
+}
+
+updateProjects();
+
+    </script>
+</body>
+</html>

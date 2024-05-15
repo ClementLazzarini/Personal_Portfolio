@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Clément Lazzarini">
+
+    <!-- To Modify -->
+    <title>Clément Lazzarini</title>
+    <meta name="description" content="">
+    <link rel="icon" href="img/Logo-white-png.png">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar dark-mode" role="navigation">
+            <a href="index.html"  class="navbar__logo"><img src="img/Logo-white-png.png" alt="Logo Blanc"></a>      
+            <ul class="navbar__links">
+              <li class="navbar__link first nav-link"><a href="index.html">Accueil</a></li>
+              <li class="navbar__link second nav-link"><a href="nos_marques.html">Présentation</a></li>
+              <li class="navbar__link third nav-link"><a href="tarifs.html">Réalisations</a></li>
+              <li class="navbar__link four glow-on-hover"><a href="#contact">Contact</a></li>
+            </ul>   
+            <button class="burger">
+              <span class="bar"></span>  
+            </button>   
+          </nav>
+    </header>
+
+    <main class="main-email-envoyee">
+        <h1>Merci pour votre message ! 🫶</h1>
+        <img src="img/message-recu.gif" alt="GIF homme qui reçois du courrier">
+        <p>J'ai bien reçu votre message,<br>je vous réponds au plus vite !</p>
+        <p>En attendant que je vous réponde, venez voir mes précédentes réalisations.</p>
+        <a href="index.html#realisations" class="glow-on-hover">Mes réalisations</a>
+    </main>
+    
+    <footer>
+        <section class="footer">
+            <div>
+                <h4>Plan du site</h4>
+                <a href="#accueil">Accueil</a>
+                <a href="#presentation">Présentation</a>
+                <a href="#realisations">Réalisations</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div>
+                <h4>Réseaux sociaux</h4>
+                <a href="https://fr.linkedin.com/in/clement-lazzarini" target="_blank"><img src="img/linkedin.png" alt="Logo LinkedIn">Linkedin</a>
+                <a href="https://github.com/ClementLazzarini" target="_blank"><img src="img/github.png" alt="Logo LinkedIn">GitHub</a>
+                <a href="https://malt.fr/"><img src="img/malt.png" alt="Logo malt">Malt</a>
+            </div>
+            <div>
+                <h4>Me contacter</h4>
+                <a href="mailto:clement.lazzarini71@gmail.com"><img src="img/enveloppe.png" alt="Logo LinkedIn">Mail</a>
+                <a href="tel:+33679912312"><img src="img/telephone.png" alt="Logo LinkedIn">Téléphone</a>
+                <a href="#contact"><img src="img/formulaire.png" alt="Logo LinkedIn">Formulaire</a>
+            </div>
+        </section>
+        <div class="bandeau-footer">
+            <p>Copyright © Clément Lazzarini</p>
+            <a href="index.html"><img src="img/Logo-white-png.png" alt="Logo Blanc"></a>
+            <a href="mentions-legales.html">Mentions légales</a>
+        </div>
+    </footer>
+
+    <script defer>
+        function toggleMenu () {  
+        const navbar = document.querySelector('.navbar');
+        const burger = document.querySelector('.burger');
+        burger.addEventListener('click', (e) => {    
+        navbar.classList.toggle('show-nav');
+        });    
+        }
+        toggleMenu();
+    </script>
+    
+</body>
+</html>

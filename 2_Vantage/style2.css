@@ -1,0 +1,643 @@
+/*----
+Code CSS réalisé par Clément Lazzarini
+Réalisation du site Aston Martin Vantage
+Temps de réalisation: 8h de travail
+4ème site internet que j'ai réalisé
+2ème site réalisé hors tutoriels
+Réalisation 10/2021
+----*/
+
+/*---- Ajouts des polices d'écritures ----*/
+@font-face {
+    font-family: 'optima';
+    src: url(fonts/Rajdhani-Regular.ttf) format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'optima-bold';
+    src: url(fonts/Rajdhani-Bold.ttf) format("truetype");
+    font-weight: 800;
+}
+
+/*---- Propriétés Générales ----*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'optima';
+    color: #fff;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+
+/*---- Header ----*/
+header{
+    background: url('img/bg_top.webp') no-repeat 50% 50%/cover;
+    height:  100vh;
+    padding: 1rem 2rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav a{
+    padding: 1rem 1rem;
+}
+
+nav h1 a{
+    font-size: 1.2rem;
+    padding: 1rem;
+    letter-spacing: 2px;
+}
+
+.header_block-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 180px;
+}
+
+.header_block-grid h2{
+    font-size: 80px;
+}
+
+.header_card{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(40px);
+    right: 2rem;
+    width: 340px
+}
+
+.header_card-head ul{
+    display: flex;
+    margin: 1rem 0;
+}
+
+.header_card-head a{
+    padding: 1rem;
+    font-family: 'optima-bold';
+    font-weight: 700;
+}
+
+.actif{
+    border-bottom: 3px solid #fff;
+}
+
+.card-img{
+    background: url('img/car_card.webp') no-repeat center center/cover;
+    height: 150px;
+}
+
+.card-desc{
+    padding: 1rem 2rem 1rem 1rem;
+}
+
+.card-desc-element{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0.5rem 0 0 0;
+}
+
+.nom-element{
+    display: flex;
+    justify-content: start;
+}
+
+.nom-element p{
+    font-size: 14px;
+}
+
+.unite{
+    margin-left: 6px;
+    color: #ffffff60;
+}
+
+.line{
+    margin-top: 5px;
+    width: 200px;
+    height: 2px;
+    background-color: #ffffff20;
+}
+
+.nb_element{
+    font-size: 28px;
+    padding-left: 20px;
+}
+
+.header_buttons-demande{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    left: 2rem;
+    bottom: 1rem;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(40px);
+    border-left: 2px solid #fff;
+    z-index: 1;
+    transition: 300ms;
+}
+
+.demande{
+    padding: 1rem 1rem 1rem 2rem;
+}
+.header_buttons-demande p{
+    padding: 1rem 0;
+}
+
+.header_buttons-demande img{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.header_buttons-demande:hover{
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.header_buttons-personnalise{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    right: 2rem;
+    bottom: 1rem;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(40px);
+    border-left: 2px solid #fff;
+    z-index: 1;
+    transition: 300ms;
+}
+
+.header_buttons-personnalise:hover{
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.personnalise{
+    padding: 1rem 2rem;
+}
+
+.header_buttons-personnalise p{
+    padding: 1rem 0;
+}
+
+.header_buttons-personnalise img{
+    width: 50px;
+    padding-right: 1rem;
+    margin-top: 4px;
+}
+
+
+
+/*---- Main ----*/
+
+/*---- Bloc Numéro 1 ----*/
+
+.block_white{
+    background-color: #F8F7F4;
+    padding-bottom: 4rem;
+}
+
+.block_white h2, .citation-text p{
+    color: #000;
+}
+
+.block_white h2{
+    font-size: 60px;
+    line-height: 60px;
+    padding: 6rem 2rem 3rem;
+}
+
+.citation{
+    display: grid;
+    grid-template-columns: 35% 65%;
+    padding: 0 2rem;
+}
+
+.citation-text p{
+    padding: 2rem;
+    font-size: 26px;
+    line-height: 40px;
+    margin-top: 3rem;
+}
+
+.citation-text p::before{
+    content: '"';
+    display: block;
+    font-size: 50px;
+    color: #000;
+    border-radius: 100px;
+    background-color: #fff;
+    height: 20px;
+    width: 20px;
+    padding: 1rem;
+    margin-bottom: -30px;
+    margin-left: -30px;
+}
+
+.citation-img-gen{
+    height: 600px;
+    background: url('img/am6_asset_39-quote.webp') no-repeat center center/cover;
+}
+
+.desc-ext{
+    display: grid;
+    grid-template-columns: 35% 65%;
+    margin-top: 5px;
+    padding: 0 2rem;
+}
+
+.desc-int{
+    display: grid;
+    grid-template-columns: 35% 65%;
+    margin-top: 5px;
+    padding: 0 2rem;
+}
+
+.desc-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 0 2rem 0 0;
+}
+
+.desc-text p{
+    color: #000;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.desc-title{
+    font-family: 'optima-bold';
+    margin-bottom: 2rem;
+}
+
+.desc-img-ext{
+    height: 1000px;
+    background: url('img/am6_asset_18.webp') no-repeat center center/cover;
+}
+
+.desc-img-int{
+    height: 500px;
+    background: url('img/interior1.webp') no-repeat center center/cover;
+}
+
+
+/*---- Carrousel ----*/
+
+#slider { width: 100%; overflow: hidden; }
+
+#slider figure {
+    position: relative; 
+    width: 400%;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    animation: 30s slidy infinite;
+  }
+
+#slider figure img { width: 20%; height: auto; float: left; }
+
+
+/*---- Bloc Configurateur ----*/
+.config{
+    position: relative;
+    height: 800px;
+    background: radial-gradient(at 70% 54%,#9fa2a9,#212325);
+    box-shadow: inset 0 -100px 100px -50px #000000;
+}
+
+.config_car{
+    position: absolute;
+    top:50%; 
+    left:50%; 
+    transform:translate(-50%, -50%); 
+    width: 60%;
+    height: 500px;
+    background: url('img/vantage-coupe.webp') no-repeat center center/contain;
+}
+
+.config h2{
+    color: #fff;
+    font-size: 36px;
+    padding: 5rem 2rem 2rem;
+}
+
+.vue_interieur{
+    font-family: 'optima-bold';
+    margin-left: 65%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.vue_interieur p{
+    font-family: 'optima-bold';
+    margin-right: 1rem;
+}
+
+.vue_interieur .plus{
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(40px);
+    border-radius: 50%;
+    padding: 1rem;
+    transition: 300ms;
+    line-height: 20px;
+    font-size: 40px;
+    font-family: 'optima';
+}
+
+.vue_interieur .plus:hover{
+    background: rgba(0, 0, 0, 0.5);
+    transform: scale(0.8);
+}
+
+.configurer{
+    font-family: 'optima-bold';
+    display: flex;
+    align-items: center;
+    margin-left: 20%;
+    position: absolute;
+    z-index: 1;
+    margin-top: 4rem;
+}
+
+.configurer p{
+    font-family: 'optima-bold';
+    margin-right: 1rem;
+}
+
+.configurer img{
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(40px);
+    border-radius: 50%;
+    padding: 5px;
+    transition: 300ms;
+}
+
+.configurer img:hover{
+    background: rgba(0, 0, 0, 0.5);
+    transform: scale(0.8);
+}
+
+
+/*---- Bloc Numéro 2 ----*/
+.block_black{
+    background-color: #161a21;
+    box-shadow: inset  0  100px 100px -100px #000;
+    padding-bottom: 2rem;
+}
+
+.block_black h2 .citation-text p{
+    color: #f8f7f4;
+}
+
+.block_black h2{
+    font-size: 60px;
+    line-height: 60px;
+    padding: 6rem 2rem 3rem;
+}
+
+
+.black_citation-text p{
+    padding: 2rem;
+    font-size: 26px;
+    line-height: 40px;
+    margin-top: 3rem;
+}
+
+.black_citation-text p::before{
+    content: '"';
+    display: block;
+    font-size: 50px;
+    color: #fff;
+    border-radius: 100px;
+    background-color: #000;
+    height: 20px;
+    width: 20px;
+    padding: 1rem;
+    margin-bottom: -30px;
+    margin-left: -30px;
+}
+
+.citation-img-gen2{
+    height: 600px;
+    background: url('img/vantage-black-1.png') no-repeat center center/cover;
+}
+
+.black-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 0 2rem 0 0;
+}
+
+.black-text p{
+    color: #f8f7f4;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+
+.desc-img-ext2{
+    height: 1000px;
+    background: url('img/am6_asset_04.webp') no-repeat center center/cover;
+}
+
+.desc-img-int2{
+    height: 500px;
+    background: url('img/vantage-black-3.png') no-repeat center center/cover;
+}
+
+
+.final_img{
+    height: 600px;
+    background: url('img/vantage.webp') no-repeat center center/cover;
+    margin: 5rem 2rem;
+}
+
+
+/*---- Footer ----*/
+
+footer{
+    background-color: #090B11;
+    padding-top: 3rem;
+}
+
+.footer_top{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 0 3rem 2rem;
+    border-bottom: 1px solid #f8f7f4;
+}
+
+.footer_card{
+    color: #f8f7f4;
+    padding-right: 6rem;
+}
+
+.footer_card h3{
+    font-family: 'optima-bold';
+    font-size: 22px;
+    padding-bottom: 1rem;
+}
+
+.footer_card p{
+    font-size: 14px;
+    padding-bottom: 2rem;
+}
+
+.footer_card a{
+    font-family: 'optima-bold';
+    font-size: 14px;
+    transition: 300ms;
+}
+
+.footer_card a:hover{
+    opacity: 0.6;
+}
+
+.footer_bottom{
+    width: 60%;
+    padding: 5rem;
+    margin: 1rem auto 0;
+}
+
+.footer_bottom h2{
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 2rem;
+    animation: flash 0.5s infinite;
+}
+
+.footer_bottom p{
+    padding-bottom: 1rem;
+}
+
+.footer_bottom a{
+    color: #161a21;
+    background-color: #f8f7f4;
+}
+
+
+/*---- Keyframes ----*/
+@keyframes flash {
+    0%{ color: red; }
+    50%{ color: #fff; }
+    100%{ color: red; }
+}
+
+
+@keyframes slidy {
+    0% { left: 0%; }
+    10%{ left: 0%; }
+    20%{ left: -80%; }
+    50%{ left: -80%; }
+    60%{ left: -160%; }
+    90% { left: -160%; }
+    100% { left: -240%; }
+}
+
+
+@media screen and (max-width:768px) {
+
+    nav{
+        position: fixed;
+        right: 0;
+        left: 0;
+        top: 0;
+        height: 4rem;
+        background-color: rgba(0,0,0,.45);
+        backdrop-filter: blur(46px);
+        justify-content: center;
+        z-index: 100;
+    }
+    nav ul{
+        display: none;
+    }
+    nav h1 a{
+        padding-top: 5rem;
+        z-index: 101;
+    }
+    .header_block-grid h2{
+        font-size: 4rem;
+        margin-top: 6rem;
+    }
+    .block_white h2, .block_black h2{
+        font-size: 3rem;
+        padding: 2rem;
+    }
+    .citation-text p, .black_citation-text p {
+        padding: 2rem 1rem;
+        font-size: 1.5rem;
+        margin-top: 0;
+        text-align: justify;
+    }
+    .desc-title{
+        padding: 2rem 0 0;
+    }
+    .desc-text, .black-text{
+        padding: 0 1rem 2rem;
+        text-align: justify;
+    }
+    .config{
+        height: calc(100vh - 4rem);
+    }
+    .config h2{
+        padding: 2rem;
+    }
+    .config_car{
+        width: 90%;
+    }
+    .vue_interieur{
+        margin-left: 0;
+        left: 40%;
+        top: 30%;
+    }
+    .configurer{
+        margin-left: 0;
+        left: 10%;
+        top: 50%;
+    }
+    .citation, .desc-ext, .desc-int{
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+    .citation-img-gen, .desc-img-ext, .desc-img-int,
+    .citation-img-gen2, .desc-img-ext2, .desc-img-int2,
+    .final_img{
+        height: 20rem;
+    }
+    .final_img{
+        margin: 4rem 0;
+    }
+    .footer_top{
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+    .footer_card{
+        padding: 0 0 1rem;
+    }
+    .footer_bottom{
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+    .header_buttons, .header_card{
+        display: none;
+    }
+}
+
+/*---- Fin du Code CSS ----*/
