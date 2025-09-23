@@ -1,355 +1,287 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <meta name="author" content="Clément Lazzarini">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Clément Lazzarini - Développeur Web Full-Stack | Création de sites et applications</title>
+    
+    <meta name="description" content="Développeur web passionné à Toulouse, je transforme vos idées en applications web performantes et sur mesure. Découvrez mes projets et mes services.">
+    <link rel="canonical" href="https://www.clementlazzarini.com/">
 
-    <!-- To Modify -->
-    <title>Clément Lazzarini</title>
-    <meta name="description" content="">
-    <link rel="icon" href="img/Logo-white-png.png">
+    <meta property="og:title" content="Clément Lazzarini - Développeur Web Full-Stack">
+    <meta property="og:description" content="Découvrez le portfolio d'un développeur passionné spécialisé en Django et le design d'interfaces modernes.">
+    <meta property="og:image" content="https://www.clementlazzarini.com/assets/image-partage-social.jpg"> 
+    <meta property="og:url" content="https://www.clementlazzarini.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Clément Lazzarini - Développeur Web Full-Stack">
+    <meta name="twitter:description" content="Découvrez le portfolio d'un développeur passionné spécialisé en Django et le design d'interfaces modernes.">
+    <meta name="twitter:image" content="https://www.clementlazzarini.com/assets/image-partage-social.jpg"> 
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="assets/media/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/media/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/media/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Clemlazz" />
+    <link rel="manifest" href="assets/media/favicon/site.webmanifest" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Clément Lazzarini",
+      "url": "https://www.clementlazzarini.com/",
+      "image": "https://www.clementlazzarini.com/assets/media/logowhite-noBG.png",
+      "jobTitle": "Développeur Web",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/clement-lazzarini/",
+        "https://github.com/clementlazzarini/",
+      ],
+      "knowsAbout": ["HTML", "CSS", "JavaScript", "Python", "Django", "UX/UI Design", "SEO"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toulouse",
+        "addressCountry": "FR"
+      }
+    }
+    </script>
+
 </head>
-
 <body>
 
-    <header>
-        <nav class="navbar dark-mode" role="navigation">
-            <a href="index.html"  class="navbar__logo"><img src="img/Logo-white-png.png" alt="Logo Blanc"></a>      
-            <ul class="navbar__links">
-              <li class="navbar__link first nav-link active" id="menuUn"><a href="#">Accueil</a></li>
-              <li class="navbar__link second nav-link" id="menuTwo"><a href="#presentation">Présentation</a></li>
-              <li class="navbar__link third nav-link" id="menuThree"><a href="#realisations">Réalisations</a></li>
-              <li class="navbar__link four glow-on-hover" id="menuFour"><a href="#contact">Contact</a></li>
-            </ul>   
-            <button class="burger">
-              <span class="bar"></span>  
-            </button>   
-          </nav>
+    <header class="hero" id="accueil">
+        <img src="assets/media/logowhite-noBG.png" alt="Logo de Clément Lazzarini" class="logo">
+        <h1>Bonjour ! <br>
+            Je suis Clément, développeur web</h1>
+        <img src="assets/media/worldwhitoutBG.png" alt="Illustration d'une planète avec des éléments web autour et une fusée" class="world">
+        <a href="#services" class="cta-button">[ DÉCOUVRIR LES OFFRES ]</a>
     </header>
 
     <main>
-        <section class="accueil" id="accueil">
-            <div class="left">
-                <h1>Bonjour !<br>
-                Je suis Clément Lazzarini,<br>
-                Développeur Web !</h1>
-                <p>Bienvenue sur mon site web professionnel. Je suis Clément Lazzarini, un développeur web expérimenté et passionné.<br><br>
-                Mon objectif : créer des sites web modernes, performants et conviviaux pour mes clients.</p>
-                <a class="glow-on-hover btn-contact" href="#contact">Contact</a>
-            </div>
-            <div class="right">
-                <div class="ppface">
-                    <img src="img/profil.png" alt="Moi">
-                </div>
-            </div>
-        </section>
-        <img src="img/fleche.png" alt="Flèche vers le bas" class="fleche">
-        <section class="presentation slide-in" id="presentation">
-            <div class="left-two">
-                <h2>Qui je suis ?</h2>
-                <p>Issu d'une formation initiale en industrie, j'ai parcouru un chemin riche en expériences pour devenir aujourd'hui un développeur web passionné.<br><br>
-
-                Après avoir quitté mon emploi pour m'installer au Canada, la pandémie de coronavirus a bouleversé mes plans. J'ai alors saisi cette opportunité pour effectuer une reconversion professionnelle.<br><br>
-                
-                Actuellement, je travaille depuis un an en tant que Cadre Technique en informatique et je suis également développeur web freelance.<br><br>
-                
-                Je me spécialise dans les technologies web telles que HTML, CSS, et le framework Python Django. Grâce à ma détermination, mon efficacité et mon écoute active, j'ai réalisé divers projets pour différents clients, notamment un site vitrine pour un institut de beauté, un photographe, et ce site web.<br><br>
-                
-                Voici mon parcours.<br><br>
-                
-                C'est pourquoi je suis prêt à relever de nouveaux défis avec vous !<br><br></p>
-            </div>
-
-            <div class="right-two">
-                <div class="hardskill">
-                    <h3 class="test">Compétences Techniques</h3>
-                    <div class="right-grid">
-                        <div class="element">
-                            <div class="title-element">
-                                <img src="img/html-5.png" alt="HTML 5 Logo">
-                                <p>HTML 5</p>
-                            </div>
-                            <div class="bar-element  ten"></div>
-                        </div>
-                        <div class="element">
-                            <div class="title-element">
-                                <img src="img/css-3.png" alt="CCS 3 Logo">
-                                <p>CSS 3</p>
-                            </div>
-                            <div class="bar-element  ten"></div>
-                        </div>
-                        <div class="element">
-                            <div class="title-element">
-                                <img src="img/python.png" alt="PYTHON Logo">
-                                <p>PYTHON</p>
-                            </div>
-                            <div class="bar-element  eight"></div>
-                        </div>
-                        <div class="element">
-                            <div class="title-element">
-                                <img src="img/js.png" alt="JAVASCRIPT Logo">
-                                <p>JS</p>
-                            </div>
-                            <div class="bar-element  five"></div>
-                        </div>
-                        <div class="element">
-                            <div class="title-element">
-                                <img src="img/djangoproject-icon.svg" alt="DJANGO Logo">
-                                <p>DJANGO</p>
-                            </div>
-                            <div class="bar-element  nine"></div>
-                        </div>
-                        <div class="element">
-                            <div class="title-element">
-                                <img src="img/sql.png" alt="SQL Logo">
-                                <p>SQL</p>
-                            </div>
-                            <div class="bar-element  quatre"></div>
-                        </div>
-                    </div>
-
-                    <div class="softskill">
-                    <h3>Compétences Générales</h3>
-                        <div class="right-grid">
-                            <div class="element">
-                                <div class="title-element">
-                                    <img src="img/creativite.png" alt="Créativité">
-                                    <p>Créativité</p>
-                                </div>
-                                <div class="bar-element  ten"></div>
-                            </div>
-                            <div class="element">
-                                <div class="title-element">
-                                    <img src="img/adaptation.png" alt="Adaptabilité">
-                                    <p>Adaptabilité</p>
-                                </div>
-                                <div class="bar-element  ten"></div>
-                            </div>
-                            <div class="element">
-                                <div class="title-element">
-                                    <img src="img/apprentissage.png" alt="Apprentissage">
-                                    <p>Apprentissage</p>
-                                </div>
-                                <div class="bar-element  ten"></div>
-                            </div>
-                            <div class="element">
-                                <div class="title-element">
-                                    <img src="img/collaboration.png" alt="Collaboration">
-                                    <p>Collaboration</p>
-                                </div>
-                                <div class="bar-element  nine"></div>
-                            </div>
-                            <div class="element">
-                                <div class="title-element">
-                                    <img src="img/organisation.png" alt="Organisation">
-                                    <p>Organisation</p>
-                                </div>
-                                <div class="bar-element  ten"></div>
-                            </div>
-                            <div class="element">
-                                <div class="title-element">
-                                    <img src="img/comprehension.png" alt="Comprehension">
-                                    <p>Compréhension</p>
-                                </div>
-                                <div class="bar-element  eight"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                
-            </div>
-        </section>
-
-        <section class="realisations" id="realisations">
-            <h2>Mes réalisations</h2>
-            <div class="real-grid">
-                <div class="card freelancing">
-                    <img src="img/photo.jpeg" alt="Institut de beautée">
-                    <div class="card-text">
-                        <p class="categorie">HTML / CSS</p>
-                        <h3>Photographe</h3>
-                        <p class="card-text-desc">Site web vitrine pour un photographe.<br>Projet en cours. Création d'une maquette, et intégration web.</p>
-                    </div>
-                    <div class="card-stats">
-                        <div><p><span>+3k</span><br>Lignes</p></div>
-                        <div><a href="https://clemsube.pythonanywhere.com/">Site Web</a></div>
-                        <div><a href="https://github.com/ClementLazzarini/Portfolio_Photographer">GitHub</a></div>
-                    </div>
-                </div>
-                <div class="card projet">
-                    <img src="img/eshop.jpeg" alt="Ferrari Grand Prix USA 2022">
-                    <div class="card-text">
-                        <p class="categorie">HTML / CSS / JS / DJANGO / PYTHON</p>
-                        <h3>E-Shop</h3>
-                        <p class="card-text-desc">Création d'un modèle de E-Shop fonctionnel, avec module de paiement Stripe.</p>
-                    </div>
-                    <div class="card-stats">
-                        <div><p><span>+8k</span><br>Lignes</p></div>
-                        <div><a href="https://clemlazz.pythonanywhere.com/" target="_blank">Site Web</a></div>
-                        <div><a href="https://github.com/ClementLazzarini/MyShop">GitHub</a></div>
-                    </div>
-                </div>
-                <div class="card freelancing">
-                    <img src="img/relaxsens.jpg" alt="Institut de beautée">
-                    <div class="card-text">
-                        <p class="categorie">HTML / CSS</p>
-                        <h3>Relax'Sens</h3>
-                        <p class="card-text-desc">Site web vitrine pour un institut de beauté.<br>J'ai réalisé le design ainsi que l'intégration web et la mise en ligne.</p>
-                    </div>
-                    <div class="card-stats">
-                        <div><p><span>+4k</span><br>Lignes</p></div>
-                        <div><a href="https://relaxsensdigoin.fr/" target="_blank">Site Web</a></div>
-                        <div><a href="https://github.com/ClementLazzarini/RelaxSens">GitHub</a></div>
-                    </div>
-                </div>
-                <div class="card projet">
-                    <img src="img/fastf1.jpg" alt="Ferrari Grand Prix USA 2022">
-                    <div class="card-text">
-                        <p class="categorie">HTML / CSS / JS / API</p>
-                        <h3>FastF1</h3>
-                        <p class="card-text-desc">Site web à propos de la Formule 1.<br><br>J'ai réalisé le design ainsi que l'intégration web et la mise en ligne.</p>
-                    </div>
-                    <div class="card-stats">
-                        <div><p><span>+28k</span><br>Lignes</p></div>
-                        <div><a href="Projets/FastF1/index.html" target="_blank">Site Web</a></div>
-                        <div><a href="https://github.com/ClementLazzarini/FastF1">GitHub</a></div>
-                    </div>
-                </div>
-                <div class="card projet">
-                    <img src="img/astonmartin.jpg" alt="Aston Martin Vantage">
-                    <div class="card-text">
-                        <p class="categorie">HTML / CSS</p>
-                        <h3>Aston Martin</h3>
-                        <p class="card-text-desc">Reproduction de la page web de l'Aston Martin Vantage.<br><br>J'ai réalisé l'intégration web de cette page afin de m'exercer au développement web.</p>
-                    </div>
-                    <div class="card-stats">
-                        <div><p><span>+1k</span><br>Lignes</p></div>
-                        <div><a href="Projets/2_Vantage/index.html">Site Web</a></div>
-                        <div><a href="https://github.com/ClementLazzarini/AstonMartin-Vantage">GitHub</a></div>
-                    </div>
-                </div>
-                <div class="card projet" >
-                    <img src="img/python-project.jpeg" alt="Logo Python">
-                    <div class="card-text">
-                        <p class="categorie">PYTHON</p>
-                        <h3>PROJETS PYTHON</h3>
-                        <p class="card-text-desc">Réalisation de plusieurs projets en python ( Trieur de fichier par date / type, Scraping,... )</p>
-                    </div>
-                    <div class="card-stats">
-                        <div><p><span>+1k</span><br>Lignes</p></div>
-                        <div style="grid-column:span 2"><a href="https://github.com/ClementLazzarini">GitHub</a></div>
-                    </div>
-                </div>
-            </div>
-            <button class="prev-btn glow-on-hover">←</button>
-            <button class="next-btn glow-on-hover">→</button>
-        </section>
-
-
-        <section class="contact" id="contact">
-            <div class="contact-text">
-                <div class="slider-container slider-1">
-                    <div class="slider">
-                      <h2>Une idée ?</h2>
-                      <h2>Un projet ?</h2>
-                      <h2>Une question ?</h2>
-                      <h2>Une remarque ?</h2>
-                      <h2>Une idée ?</h2>
-                    </div>
-                </div>
-                <h3>Contactez-moi via ce formulaire ! ➡️</h3>
-            </div>
-            
-            <form method="post" id="contact-form">
-                <div>
-                    <label for="nom">Votre nom</label>
-                    <input type="text" id="lastname" name="nom" placeholder="Nom" required minlength="2"/>
-                </div>
-                <div>
-                    <label for="prenom">Votre prénom</label>
-                    <input type="text" id="firstname" name="prenom" placeholder="Prénom" required minlength="2"/>
-                </div>
-                <div>
-                    <label for="email">Votre e-mail</label>
-                    <input type="email" id="email" name="email" placeholder="exemple@mail.com" required/>
-                </div>
-                <div>
-                    <label for="objet">Quel est le sujet de votre message ?</label>
-                    <input type="text" id="subject" name="objet" placeholder="Sujet de la demande" required/>
-                </div>
-                <div>
-                    <label for="message">Votre message</label>
-                    <textarea id="message" name="message"  placeholder="Bonjour, je vous contact car..." required></textarea>
-                </div>
-                
-                <button type="submit" class="btn-envoi glow-on-hover">Envoyer mon message</button>
-            </form>
-        </section>
-
         
+        <section id="services">
+            <h2>Une solution pro au prix juste, pensée pour vous</h2>
+
+            <div class="swipe-indicator">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <div class="price-cards-container">
+
+                <article class="price-card" id="offer-essentielle">
+                    <div class="card-header">
+                        <h3>Offre Essentielle <span class="icon-rocket">🚀</span></h3>
+                        <p>Pour un site vitrine efficace et abordable.</p>
+                    </div>
+                    
+                    <ul class="features-list">
+                        <li class="feature-item"><span class="icon-check">✅</span> Site vitrine Professionnel</li>
+                        <li class="feature-item"><span class="icon-check">✅</span> Design 100% Responsive</li>
+                        <li class="feature-item"><span class="icon-check">✅</span> Optimisation SEO de base</li>
+                    </ul>
+
+                    <div class="bonus-support">
+                        <p>+ 1 mois de support offert <span class="icon-gift">🎁</span></p>
+                    </div>
+
+                    <div class="price-details">
+                        <span class="price-label">À partir de</span>
+                        <span class="price">990€</span>
+                    </div>
+
+                    <a href="#contact" class="cta-button primary-cta">[ CHOISIR CETTE OFFRE ]</a>
+                </article>
+
+                <article class="price-card" id="offer-premium">
+                    <div class="card-header">
+                        <h3>Offre Premium <span class="icon-sparkle">✨</span></h3>
+                        <p>Pour un site professionnel plus complet et évolutif.</p>
+                    </div>
+                    
+                    <ul class="features-list">
+                        <li class="feature-item"><span class="icon-check">✅</span> Offre Essentielle</li>
+                        <li class="feature-item"><span class="icon-check">✅</span> Optimisation SEO avancée</li>
+                        <li class="feature-item"><span class="icon-check">✅</span> Blog ou gestion de contenu</li>
+                        <li class="feature-item"><span class="icon-check">✅</span> Design personnalisé</li>
+                    </ul>
+
+                    <div class="bonus-support">
+                        <p>+ 2 mois de support offert <span class="icon-gift">🎁</span></p>
+                    </div>
+
+                    <div class="price-details">
+                        <span class="price-label">À partir de</span>
+                        <span class="price">1500€</span>
+                    </div>
+
+                    <a href="#contact" class="cta-button primary-cta">[ CHOISIR CETTE OFFRE ]</a>
+                </article>
+
+                <article class="price-card" id="offer-surmesure">
+                    <div class="card-header">
+                        <h3>Offre Sur-Mesure <span class="icon-wrench">🛠️</span></h3>
+                        <p>Pour une solution totalement unique, adaptée à vos besoins.</p>
+                    </div>
+                    
+                    <ul class="features-list">
+                        <li class="feature-item"><span class="icon-check">✅</span> Offre Premium</li>
+                        <li class="feature-item"><span class="icon-check">✅</span> Fonctionnalités sur demande</li>
+                        <li class="feature-item"><span class="icon-check">✅</span> Design totalement unique</li>
+                        <li class="feature-item"><span class="icon-check">✅</span> Intégrations complexes</li>
+                    </ul>
+
+                    <div class="bonus-support">
+                        <p>+ 6 mois de support offert <span class="icon-gift">🎁</span></p>
+                    </div>
+
+                    <div class="price-details">
+                        <span class="price-label">À partir de</span>
+                        <span class="price price-ondevis">Sur devis</span>
+                    </div>
+
+                    <a href="#contact" class="cta-button primary-cta">[ CHOISIR CETTE OFFRE ]</a>
+                </article>
+
+            </div> 
+        </section>
+
+        <section id="projets">
+            <h2>Quelques projets que j’ai réalisés 🎯</h2>
+
+            <article class="project-card">
+                <img src="assets/media/projectesthetic.jpg" alt="Aperçu du projet Relax'Sens">
+                <h3>Site vitrine salon d'esthétique</h3>
+                <p>Développement d’une application web complète avec création d’une maquette sur mesure et optimisation du SEO. Développement d’une application web complète avec création d’une maquette sur mesure et optimisation du SEO. </p>
+                <div class="tags-container">
+                    <p>#HTML</p>
+                    <p>#CSS</p>
+                    <p>#Javascript</p>
+                </div>
+                <a href="https://www.relaxsensdigoin.fr" target="_blank">[ VISITER LE SITE ]</a>
+            </article>
+
+             <article class="project-card">
+                <img src="assets/media/projectphotographer.jpeg" alt="Aperçu du projet Photographe">
+                <h3>Site vitrine Photographe</h3>
+                <p>Développement d’une application web complète avec création d’une maquette sur mesure et optimisation du SEO. Développement d’une application web complète avec création d’une maquette sur mesure et optimisation du SEO. </p>
+                <div class="tags-container">
+                    <p>#HTML</p>
+                    <p>#CSS</p>
+                    <p>#Javascript</p>
+                    <p>#Python</p>
+                    <p>#Django</p>
+                </div>
+                <a href="https://clemsube.pythonanywhere.com/" target="_blank">[ VISITER LE SITE ]</a>
+            </article>
+
+             <article class="project-card">
+                <img src="assets/media/projectformula1.jpg" alt="Aperçu du projet FastF1">
+                <h3>Site d'actualité Formule 1</h3>
+                <p>Développement d’une application web complète avec création d’une maquette sur mesure et optimisation du SEO. Développement d’une application web complète avec création d’une maquette sur mesure et optimisation du SEO.</p>
+                <div class="tags-container">
+                    <p>#HTML</p>
+                    <p>#CSS</p>
+                    <p>#Javascript</p>
+                </div>
+                <a href="https://github.com/ClementLazzarini/FastF1" target="_blank">[ VISITER LE SITE ]</a>
+            </article>
+
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Une question ? Un projet ?</h2>
+            <p class="contact-subtitle">Contactez-moi et donnons vie à vos idées.</p>
+
+            <form class="contact-form" action="https://submit.emailjs.com/api/v1.0/email/send" method="POST" id="contactForm">
+                <div class="form-group">
+                    <label for="name" class="visually-hidden">Nom</label>
+                    <input type="text" id="name" name="user_name" placeholder="Nom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="visually-hidden">Email</label>
+                    <input type="email" id="email" name="user_email" placeholder="Email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject" class="visually-hidden">Sujet</label>
+                    <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="visually-hidden">Votre Message</label>
+                    <textarea id="message" name="message" placeholder="Votre Message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="cta-button primary-cta send-message-button">[ ENVOYER LE MESSAGE ]</button>
+
+                <div id="form-messages" aria-live="polite"></div>
+            </form>
+
+            <div class="social-links-contact">
+                <a href="https://www.linkedin.com/in/clement-lazzarini/" target="_blank" rel="noopener noreferrer" aria-label="Mon profil LinkedIn">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="https://github.com/clementlazzarini/" target="_blank" rel="noopener noreferrer" aria-label="Mon profil GitHub">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/clemlazztech/" target="_blank" rel="noopener noreferrer" aria-label="Mon profil Twitter/X">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c11 3 21-1 21-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        <section class="footer">
-            <div>
-                <h4>Plan du site</h4>
-                <a href="#accueil">Accueil</a>
-                <a href="#presentation">Présentation</a>
-                <a href="#realisations">Réalisations</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div>
-                <h4>Réseaux sociaux</h4>
-                <a href="https://fr.linkedin.com/in/clement-lazzarini" target="_blank"><img src="img/linkedin.png" alt="Logo LinkedIn">Linkedin</a>
-                <a href="https://github.com/ClementLazzarini" target="_blank"><img src="img/github.png" alt="Logo LinkedIn">GitHub</a>
-                <a href="https://www.malt.fr/profile/clementlazzarini1"><img src="img/malt.png" alt="Logo malt">Malt</a>
-            </div>
-            <div>
-                <h4>Me contacter</h4>
-                <a href="mailto:clement.lazzarini71@gmail.com"><img src="img/enveloppe.png" alt="Logo LinkedIn">Mail</a>
-                <a href="tel:+33679912312"><img src="img/telephone.png" alt="Logo LinkedIn">Téléphone</a>
-                <a href="#contact"><img src="img/formulaire.png" alt="Logo LinkedIn">Formulaire</a>
-            </div>
-        </section>
-        <div class="bandeau-footer">
-            <p>© 2024 Clément Lazzarini - All rights reserved</p>
-            <a href="#"><img src="img/Logo-white-png.png" alt="Logo Blanc"></a>
-            <a href="mentions-legales.html">Mentions légales</a>
-        </div>
+    <footer class="site-footer">
+        <p class="copyright"><a href="mentions-legales.html">Mentions Légales</a></p>
+        <p class="copyright">&copy; 2025 Clément Lazzarini - All rights reserved</p>
     </footer>
 
-    <script>
-        const presOne = document.querySelector('.left-two');
-        const presTwo = document.querySelector('.right-two');
+    <nav class="bottom-navbar">
+        <a href="#accueil" class="nav-link active" aria-label="Accueil">
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </span>
+        </a>
+        <a href="#services" class="nav-link" aria-label="Services">
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </span>
+        </a>
+        <a href="#projets" class="nav-link" aria-label="Projets">
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </span>
+        </a>
+        <a href="#contact" class="nav-link" aria-label="Contact">
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </span>
+        </a>
+    </nav>
 
-        window.addEventListener('scroll', ()=> {
-            const {scrollTop, scrollHeight, clientHeight} = document.documentElement;
 
-            if (scrollTop > 300){
-                presOne.classList.add("apparition");
-                presTwo.classList.add("apparition");
-            }
-        })
-    </script>
-
-    <script defer>
-        function toggleMenu () {  
-        const navbar = document.querySelector('.navbar');
-        const burger = document.querySelector('.burger');
-        burger.addEventListener('click', (e) => {    
-        navbar.classList.toggle('show-nav');
-        });    
-        }
-        toggleMenu();
-    </script>
-
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript" src="/js/progressmenu.js"></script>
-    <script type="text/javascript" src="/js/scroll.js"></script>
-    <script type="text/javascript" src="/js/email.js"></script>
-
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

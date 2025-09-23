@@ -1,0 +1,782 @@
+/* =======================================================
+   1. Variables CSS (Couleurs, Polices, Espacements)
+   ======================================================= */
+:root {
+    /* --- Couleurs du Thème Clair --- */
+    --light-bg: #F8F7FF;
+    --light-card-bg: #FFFFFF;
+    --light-text: #1A103C;
+    --light-accent-blue: #4A4AFF;
+    --light-accent-violet: #7000FF;
+    --light-accent-pink: #FF4A8D;
+    --light-gray-text: #6B7280;
+
+    /* --- Couleurs du Thème Sombre --- */
+    --dark-bg: #0D0B1F;
+    --dark-card-bg: #191533;
+    --dark-text: #E8E6FF;
+    --dark-accent-pink: #F62D8F;
+    --dark-accent-violet: #8F48FF;
+    --dark-accent-blue: #00F5FF;
+
+    /* --- Couleurs pour les Dégradés --- */
+    --gradient-1: linear-gradient(0deg, #FBC2EB 0%, #A18CD1 100%); /* Violet vers rose */
+    --gradient-2: linear-gradient(90deg, var(--dark-accent-pink) 0%, var(--dark-accent-blue) 100%); /* Rose vers Bleu */
+    --gradient-3: linear-gradient(90deg, var(--dark-accent-pink) 0%, var(--dark-accent-violet) 100%); /* Rose vers Violet */
+    --gradient-4: linear-gradient(90deg, var(--dark-accent-blue) 0%, var(--dark-accent-violet) 100%); /* Bleu vers Violet */
+
+    /* --- Polices --- */
+    --font-primary: 'Exo 2', sans-serif; /* Pour les titres et éléments importants (CTA, prix) */
+    --font-secondary: 'Inter', sans-serif; /* Pour le corps de texte */
+
+    /* --- Espacements de Base (utilisez-les comme un système) --- */
+    --spacing-xs: 0.5rem;   /* 8px */
+    --spacing-sm: 1rem;    /* 16px */
+    --spacing-md: 1.5rem;  /* 24px */
+    --spacing-lg: 2rem;    /* 32px */
+    --spacing-xl: 3rem;    /* 48px */
+    --spacing-xxl: 4rem;   /* 64px */
+}
+
+
+/* =======================================================
+   2. Reset / Styles de Base (Appliquer à tout le site)
+   ======================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-secondary); 
+    line-height: 1.6; 
+    color: var(--light-text); 
+    background-color: var(--light-bg); 
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+/* Styles pour les éléments focusables (accessibilité) */
+.cta-button:focus-visible,
+.project-card a:focus-visible,
+.bottom-navbar .nav-link:focus-visible {
+    outline: 3px solid var(--light-accent-pink);
+    outline-offset: 2px;
+}
+
+/* Styles des liens */
+a {
+    color: var(--light-accent-blue); /* Couleur des liens, vous pouvez la changer */
+    text-decoration: none; /* Pas de soulignement par défaut */
+}
+a:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+/* Styles des titres */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary); /* Police primaire pour les titres */
+    color: var(--light-text); /* Couleur des titres */
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm); /* Espacement sous les titres */
+}
+
+/* Tailles et poids spécifiques pour les titres */
+h1 { 
+    font-size: 2.5rem; 
+    font-weight: 900; 
+}
+
+h2 { 
+    font-size: 2rem; 
+    font-weight: 800; 
+} 
+
+h3 { 
+    font-size: 1.5rem; 
+    font-weight: 700; 
+} 
+
+
+/* =======================================================
+   3. Utilitaires / Classes de base (Réutilisables partout)
+   ======================================================= */
+.container {
+    max-width: 1200px; /* Largeur maximale du contenu */
+    margin: 0 auto; /* Centre le contenu horizontalement */
+    padding: 0 var(--spacing-md); /* Padding latéral pour mobile */
+}
+
+/* Classe pour cacher visuellement un élément mais le garder accessible aux lecteurs d'écran */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+/* =======================================================
+   4. Composants Partagés (Cartes, Boutons, Tags)
+   ======================================================= */
+
+/* --- Boutons (CTA) --- */
+.cta-button {
+    margin-top: var(--spacing-md);
+    background-color: var(--light-text); /* Fond noir */
+    color: var(--light-bg); /* Texte blanc */
+    font-size: 1rem;
+    font-weight: 700;
+    padding: var(--spacing-sm);
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--dark-accent-pink); /* Changement de couleur au survol */
+    color: var(--light-bg);
+    transform: translateY(-3px);
+        text-decoration: none;
+}
+
+
+
+/* =======================================================
+   5. Sections Spécifiques à la Page d'Accueil
+   ======================================================= */
+header {
+    min-height: 100vh;
+    background: var(--gradient-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    padding-bottom: var(--spacing-xl); /* Ajout d'un padding en bas pour l'espace */
+}
+
+header .logo{
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+header h1{
+    font-size: 2rem;
+    color: var(--light-bg);
+    font-weight: bold;
+}
+
+header img{
+    width: 300px;
+    margin-top: 20px;
+}
+
+
+/* =======================================================
+   6. Section Spécifique aux Tarifs (Services)
+   ======================================================= */
+
+#services {
+    padding: var(--spacing-lg) 0; /* Padding vertical, pas de padding horizontal pour laisser le conteneur des cartes déborder */
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: var(--spacing-md);
+    padding: 0 var(--spacing-md); /* Padding pour le titre uniquement */
+}
+
+/* --- Indicateurs de swipe --- */
+.swipe-indicator {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem; /* Espace entre les points */
+    margin-bottom: var(--spacing-sm);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--light-gray-text); /* Couleur des points inactifs */
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background-color: var(--dark-accent-pink); /* Couleur du point actif */
+    transform: scale(1.2); /* Un peu plus grand pour le point actif */
+    opacity: 1;
+}
+
+
+/* --- Conteneur des cartes (pour le swipe) --- */
+.price-cards-container {
+    display: flex; /* Aligne les cartes horizontalement */
+    overflow-x: auto; /* Active le défilement horizontal */
+    scroll-snap-type: x mandatory; /* Force les cartes à se "caler" lors du défilement */
+    scroll-padding: 0 var(--spacing-md); /* Assure un espacement correct lors du snap */
+    -webkit-overflow-scrolling: touch; /* Améliore l'expérience de défilement sur iOS */
+    gap: var(--spacing-md); /* Espace entre chaque carte */
+    padding: 0 var(--spacing-md); /* Padding latéral pour ne pas que les cartes collent aux bords */
+    padding-bottom: var(--spacing-md); /* Espace pour la barre de défilement */
+}
+
+/* Masque la barre de défilement */
+.price-cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* --- Chaque carte de prix --- */
+.price-card {
+    flex: 0 0 95%; /* Chaque carte prend 85% de la largeur du conteneur, sans rétrécir */
+    max-width: 400px; /* Limite la largeur des cartes sur les écrans plus larges */
+    scroll-snap-align: center; /* Aligne chaque carte au centre lors du défilement */
+
+    /* Styles de base de la carte */
+    background-color: var(--light-card-bg); /* Fond blanc */
+    border: 1px solid #7000FF;
+    border-radius: 24px; /* Bords arrondis */
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column; /* Aligne les éléments à l'intérieur verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    text-align: center;
+    box-shadow: 4px 4px 10px 0 rgba(235, 30, 232, 0.3); /* Ombre douce */
+}
+
+
+/* --- En-tête de la carte --- */
+.card-header h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--light-text); /* Texte noir */
+    margin-bottom: var(--spacing-xs);
+}
+
+.card-header p {
+    font-size: 0.9rem;
+    color: var(--light-gray-text); /* Texte gris secondaire */
+    min-height: 40px; /* Hauteur minimale pour aligner les listes en dessous */
+    margin-bottom: var(--spacing-md);
+}
+
+
+/* --- Liste des fonctionnalités --- */
+.features-list {
+    list-style: none; /* Pas de puces par défaut */
+    padding: 0;
+    text-align: left;
+    margin-bottom: var(--spacing-md);
+    width: 100%;
+    color: var(--light-text);
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+    font-size: 1rem;
+}
+
+.feature-item .icon-check {
+    margin-right: 0.75rem;
+}
+
+
+/* --- Bloc "Support offert" --- */
+.bonus-support {
+    background-color: rgba(246, 45, 143, 0.1); /* Fond rose très léger (couleur de --dark-accent-pink) */
+    border-radius: 12px;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
+}
+
+.bonus-support p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--dark-accent-pink); /* Texte rose */
+}
+
+
+/* --- Détails du prix --- */
+.price-details {
+    margin-top: auto; /* Pousse cette section et le bouton vers le bas */
+    padding-top: var(--spacing-md);
+}
+
+.price-label {
+    font-size: 1rem;
+    color: var(--light-gray-text);
+    display: block;
+}
+
+.price {
+    font-family: var(--font-primary);
+    font-size: 3rem; /* Gros prix */
+    font-weight: 900;
+    line-height: normal;
+    color: var(--light-text);
+    display: block;
+    margin-top: var(--spacing-xs);
+}
+
+.price-ondevis {
+    font-size: 2rem; /* Taille plus petite pour "Sur devis" */
+}
+
+.price-card .cta-button {
+    width: 100%; /* Le bouton prend toute la largeur de la carte */
+}
+
+
+/* =======================================================
+   7. Section Spécifique aux Projets
+   ======================================================= */
+
+#projets {
+    padding: var(--spacing-xl) var(--spacing-md); /* Espacement vertical et horizontal */
+    text-align: center;
+}
+
+#projets h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: var(--spacing-md);
+    padding: 0 var(--spacing-md); /* Padding pour le titre uniquement */
+    display: flex; /* Pour aligner le titre et l'emoji */
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem; /* Espace entre le texte et l'emoji */
+}
+
+
+/* --- Chaque carte de projet --- */
+.project-card {
+    background-color: var(--light-card-bg); /* Fond blanc */
+    border: 1px solid #000;
+    border-radius: 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Ombre douce */
+    text-align: left; /* Aligne le texte à gauche à l'intérieur de la carte */
+    margin: 0 auto var(--spacing-lg); /* Centre la carte et ajoute un espace en dessous */
+    max-width: 400px; /* Limite la largeur sur mobile */
+    overflow: hidden; /* **Très important** pour que les coins de l'image soient arrondis */
+
+    /* Utilisation de Flexbox pour l'agencement interne */
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Image du projet --- */
+.project-card img {
+    width: 100%;
+    height: 200px; /* Hauteur fixe pour toutes les images */
+    object-fit: cover; /* Assure que l'image remplit l'espace sans se déformer */
+}
+
+/* --- Titre du projet --- */
+.project-card h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--light-text); /* Texte noir */
+    padding: var(--spacing-md) var(--spacing-md) 0; /* Padding en haut et sur les côtés */
+}
+
+/* --- Description du projet --- */
+.project-card p {
+    font-size: 0.95rem;
+    color: var(--light-gray-text); /* Texte gris secondaire */
+    padding: 0 var(--spacing-md); /* Padding sur les côtés */
+    line-height: 1.5;
+    margin-bottom: var(--spacing-md);
+}
+
+/* --- Conteneur des tags de technologies --- */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap; /* Les tags peuvent passer à la ligne si besoin */
+    gap: 0.5rem; /* Espace entre les tags */
+    padding: 0 var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Style de chaque tag (cible les <p> dans votre HTML) */
+.tags-container p {
+    background-color: var(--light-accent-blue); /* Fond bleu */
+    color: var(--light-bg); /* Texte blanc */
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px; /* Forme de pilule */
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin: 0; /* Annule la marge par défaut des paragraphes */
+}
+
+
+/* --- Bouton CTA "Visiter le site" --- */
+.project-card a {
+    display: block; /* Pour qu'il prenne toute la largeur disponible */
+    width: calc(100% - (2 * var(--spacing-md))); /* Largeur = 100% - padding gauche/droit */
+    margin: auto var(--spacing-md) var(--spacing-md); /* Centre et espace le bouton */
+    
+    /* Styles du bouton */
+    background-color: var(--light-text);
+    color: var(--light-bg);
+    padding: var(--spacing-sm);
+    border-radius: 12px;
+    text-align: center;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.project-card a:hover {
+    background-color: var(--dark-accent-pink);
+    text-decoration: none;
+    transform: translateY(-3px);
+}
+
+
+/* =======================================================
+   8. Section Spécifique au Contact
+   ======================================================= */
+
+.contact-section {
+    padding: var(--spacing-xl) var(--spacing-md);
+    padding-bottom: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.contact-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: var(--spacing-md);
+    padding: 0 var(--spacing-md); /* Padding pour le titre uniquement */
+    display: flex; /* Pour aligner le titre et l'emoji */
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem; /* Espace entre le texte et l'emoji */
+}
+
+ 
+/* --- Formulaire de contact --- */
+.contact-form {
+    background-color: var(--light-card-bg); /* Fond sombre de la carte du formulaire */
+    border-radius: 24px;
+    padding: var(--spacing-lg);
+    padding-bottom: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Bordure subtile */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ombre pour l'effet de profondeur */
+    width: 90%; /* Largeur sur mobile */
+    max-width: 550px; /* Limite la largeur sur les grands écrans */
+    margin-bottom: var(--spacing-xl);
+    text-align: left; /* Aligne le contenu du formulaire à gauche */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+    width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md); /* Padding interne des champs */
+    border: 1px solid var(--light-accent-violet); /* Bordure violette */
+    border-radius: 12px;
+    background-color: var(--light-bg); /* Fond des champs plus sombre que la carte */
+    color: var(--light-text); /* Couleur du texte saisi */
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--light-gray-text); /* Couleur du placeholder */
+    opacity: 0.7; /* Légèrement transparent */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none; /* Supprime l'outline bleu/noir par défaut */
+    border-color: var(--light-accent-pink); /* Bordure rose au focus */
+    box-shadow: 0 0 0 3px rgba(var(--light-accent-pink), 0.3); /* Légère lueur rose */
+}
+
+.form-group textarea {
+    resize: vertical; /* Permet uniquement le redimensionnement vertical */
+    min-height: 120px;
+}
+
+.contact-form button {
+    display: block; /* Pour qu'il prenne toute la largeur disponible */
+    width: 100%;
+    margin: auto var(--spacing-md) var(--spacing-md); /* Centre et espace le bouton */
+    
+    /* Styles du bouton */
+    background-color: var(--light-text);
+    color: var(--light-bg);
+    padding: var(--spacing-sm);
+    border-radius: 12px;
+    text-align: center;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+/* --- Messages de formulaire (succès/erreur) --- */
+#form-messages {
+    margin-top: var(--spacing-md);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--light-accent-blue); /* Couleur par défaut, ajuster en JS */
+    text-align: center;
+}
+
+
+/* --- Liens Sociaux Contact (sous le formulaire) --- */
+.social-links-contact {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg); /* Espace entre les icônes */
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.social-links-contact a {
+    display: flex; /* Pour centrer le SVG à l'intérieur du lien */
+    align-items: center;
+    justify-content: center;
+    width: 48px; /* Taille de la zone cliquable */
+    height: 48px;
+    border-radius: 50%; /* Si vous voulez un fond rond au survol */
+    transition: background-color 0.2s ease;
+}
+
+.social-links-contact .social-icon {
+    width: 32px; /* Taille des icônes SVG */
+    height: 32px;
+    color: var(--light-accent-violet); /* Couleur des icônes par défaut (violet) */
+    transition: color 0.2s ease;
+}
+.social-links-contact a:hover .social-icon {
+    color: var(--light-accent-pink); /* Changement de couleur au survol (rose) */
+}
+
+
+/* =======================================================
+   9. Footer
+   ======================================================= */
+.site-footer {
+    padding: var(--spacing-lg) var(--spacing-md) calc(var(--spacing-lg) + 64px + 1rem); /* Padding pour laisser de la place à la navbar fixe */
+    text-align: center;
+    color: var(--light-gray-text);
+    font-size: 0.85rem;
+    margin-top: auto; /* Pousse le footer vers le bas si le contenu est court */
+}
+.site-footer p {
+    margin-bottom: var(--spacing-xs);
+}
+.site-footer .copyright:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =======================================================
+   10. Navigation Fixe du Bas (Bottom Navbar) 
+   ======================================================= */
+.bottom-navbar {
+    position: fixed;
+    bottom: 1rem; /* Marge par rapport au bas de l'écran */
+    left: 50%;
+    transform: translateX(-50%); /* Centre la navbar horizontalement */
+    width: 90%; /* Prend 90% de la largeur du viewport sur mobile */
+    max-width: 400px; /* Limite la largeur max pour les écrans un peu plus grands */
+    height: 56px; /* Hauteur fixe de la barre */
+    
+    background-color: var(--light-card-bg); /* Fond blanc de la barre */
+    border: 1px solid #000; /* Bordure noire */
+    border-radius: 50px; /* Bords très arrondis pour l'effet pilule */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Légère ombre */
+    
+    display: flex;
+    justify-content: space-around; /* Espace les liens uniformément */
+    align-items: center; /* Centre les éléments verticalement */
+    padding: 0 0.5rem; /* Petit padding horizontal à l'intérieur de la barre */
+    z-index: 1000; /* Assure que la navbar est au-dessus du contenu */
+}
+
+/* Chaque lien de navigation */
+.bottom-navbar .nav-link {
+    display: flex; /* Utilise flexbox pour centrer l'icône dans le lien */
+    justify-content: center;
+    align-items: center;
+    width: 48px; /* Largeur de la zone de clic/cercle pour le lien */
+    height: 48px; /* Hauteur de la zone de clic/cercle pour le lien */
+    border-radius: 50%; /* Pour permettre le cercle rose au survol/actif */
+    color: #000; /* Couleur des icônes par défaut (noir) */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Le conteneur de l'icône à l'intérieur du lien (peut être stylisé ou ignoré) */
+.bottom-navbar .nav-link .icon-wrapper {
+    display: flex; /* Pour s'assurer que le SVG est bien centré dans son wrapper */
+    justify-content: center;
+    align-items: center;
+}
+
+/* L'icône SVG elle-même */
+.bottom-navbar .nav-link svg {
+    display: block; /* **Ceci est crucial pour l'alignement vertical** */
+    width: 24px;
+    height: 24px;
+    stroke: currentColor; /* Prend la couleur du parent (.nav-link) */
+    stroke-width: 2;
+}
+
+/* Style du lien actif (avec le fond rose) */
+.bottom-navbar .nav-link.active {
+    background-color: var(--dark-accent-pink); /* Couleur rose de votre maquette */
+    color: var(--light-bg); /* Couleur de l'icône (blanc) */
+}
+
+/* Effet au survol des liens inactifs (si vous voulez un effet) */
+.bottom-navbar .nav-link:hover:not(.active) {
+    /* background-color: rgba(0, 0, 0, 0.05); */ /* Un léger fond gris au survol */
+    color: var(--dark-accent-pink); /* Ou une autre couleur si vous voulez les icônes colorées au survol */
+}
+
+
+/* =======================================================
+   11. Media Queries (pour Desktop) - MOBILE FIRST
+   ======================================================= */
+
+/* Styles pour les tablettes et écrans plus grands (min-width: 768px) */
+@media (min-width: 768px) {
+    #projets {
+        /* On va appliquer la grille au conteneur de la section */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablette */
+        gap: var(--spacing-lg); /* Espace entre les cartes */
+        max-width: 900px;
+        margin: 0 auto; /* Centre la grille */
+        padding: var(--spacing-xxl) var(--spacing-md);
+    }
+
+    #projets h2 {
+        grid-column: 1 / -1; /* Le titre prend toute la largeur de la grille */
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .project-card {
+        margin: 0; /* Annule la marge de la version mobile */
+    }
+
+    .contact-section {
+        padding: var(--spacing-xxl) var(--spacing-md);
+    }
+
+    .contact-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .contact-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .contact-form {
+        padding: var(--spacing-xl); /* Plus de padding sur desktop */
+    }
+
+    /* Le footer n'a plus besoin d'autant de padding si la navbar est cachée */
+    .site-footer {
+        padding-bottom: var(--spacing-lg);
+    }
+}
+
+/* Styles pour les grands écrans desktop (min-width: 1024px ou 1200px) */
+@media (min-width: 1024px) {
+    #services {
+        padding: var(--spacing-xxl) var(--spacing-md);
+    }
+
+    #services h2 {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: var(--spacing-xl);
+        padding: 0 var(--spacing-md); /* Padding pour le titre uniquement */
+    }
+
+    .swipe-indicator {
+        display: none; /* Cache les points sur desktop */
+    }
+
+    .price-cards-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Grille de 3 colonnes */
+        max-width: 1100px; /* Largeur max du conteneur des cartes */
+        margin: 0 auto; /* Centre la grille */
+        overflow-x: visible; /* Plus de défilement horizontal */
+        padding: 0;
+    }
+
+    .price-card {
+        flex: 1; /* Les cartes peuvent maintenant grandir pour remplir l'espace */
+    }
+
+    #projets {
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur grand écran */
+        max-width: 1200px;
+    }
+
+    .bottom-navbar {
+        /* On change sa position */
+        bottom: auto; /* Annule le positionnement en bas */
+        top: 50%; /* On la positionne par rapport au haut */
+        left: var(--spacing-md); /* On la colle à gauche avec une marge */
+        transform: translateY(-50%); /* On la centre verticalement */
+        
+        /* On change sa forme */
+        width: 64px; /* Largeur fixe de la barre verticale */
+        height: auto; /* La hauteur s'adapte au contenu */
+        max-height: 400px; /* Hauteur maximale pour ne pas qu'elle soit trop grande */
+        flex-direction: column; /* On empile les icônes verticalement */
+        gap: var(--spacing-sm); /* On ajoute de l'espace entre les icônes */
+        padding: var(--spacing-md) 0; /* Padding vertical */
+    }
+    
+}
