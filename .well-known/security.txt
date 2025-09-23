@@ -1,0 +1,12 @@
+# security.txt pour clementlazzarini.com
+# Contactez-moi si vous découvrez une faille de sécurité.
+
+Contact: mailto:hello.clementlazzarini@gmail.com
+
+# Je n'ai pas de politique de sécurité formelle pour le moment.
+# Policy:
+
+# Je n'ai pas de page de remerciements pour le moment.
+# Acknowledgments:
+
+Preferred-Languages: fr, en

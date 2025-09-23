@@ -64,35 +64,49 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Gestion du formulaire de contact avec EmailJS
     // (Assurez-vous que EmailJS est inclus dans votre HTML)
     // =======================================================
-
-    const contactForm = document.getElementById('contactForm');
     const formMessages = document.getElementById('form-messages');
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
 
-    if (contactForm && formMessages) {
-        // Initialiser EmailJS avec votre clé publique si vous ne l'avez pas fait via CDN global.
-        // Exemple: emailjs.init("YOUR_PUBLIC_KEY"); // DÉCOMMENTER ET REMPLACER
+        document.querySelector('.send-message-button').disabled = true;
+        
+        // Récupérer les valeurs des champs du formulaire
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
 
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault();
+        // Configuration du service EmailJS
+        emailjs.init('UaKKY6fywjdxH9m9R');
+        
+        // Envoi de l'e-mail
+        const templateParams = {
+            to_name: 'Votre Nom',
+            from_name: name,
+            from_email: email,
+            firstname: name,
+            lastname: name,
+            subject: subject,
+            message: message
+        };
 
-            formMessages.textContent = 'Envoi en cours...';
-            formMessages.style.color = '#FFA500';
+        const serviceID = 'service_k7boed8'; 
+        const templateID = 'template_s013tj7';
 
-            const serviceID = 'YOUR_SERVICE_ID'; // Remplacez par votre Service ID
-            const templateID = 'YOUR_TEMPLATE_ID'; // Remplacez par votre Template ID
-
-            emailjs.sendForm(serviceID, templateID, this)
-                .then(() => {
-                    formMessages.textContent = 'Votre message a été envoyé avec succès !';
-                    formMessages.style.color = '#4CAF50';
-                    contactForm.reset();
-                }, (error) => {
-                    formMessages.textContent = 'Erreur lors de l\'envoi du message : ' + error.text;
-                    formMessages.style.color = '#FF0000';
-                    console.error('Erreur EmailJS :', error);
-                });
-        });
-    }
+        formMessages.textContent = 'Envoi en cours...';
+        formMessages.style.color = '#FFA500';
+        
+        emailjs.send(serviceID, templateID, templateParams)
+            .then(() => {
+                formMessages.textContent = 'Votre message a été envoyé avec succès !';
+                formMessages.style.color = '#4CAF50';
+                contactForm.reset();
+            }, (error) => {
+                formMessages.textContent = 'Erreur lors de l\'envoi du message : ' + error.text;
+                formMessages.style.color = '#FF0000';
+                console.error('Erreur EmailJS :', error);
+            });
+    });
 
 
     // =======================================================
