@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
     // =======================================================
     // 2. Gestion du formulaire de contact avec EmailJS
     // (Assurez-vous que EmailJS est inclus dans votre HTML)
