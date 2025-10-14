@@ -1,0 +1,9 @@
+User-agent: *
+
+Disallow: /admin/
+
+
+Allow: /assets/css/
+Allow: /assets/js/
+
+Sitemap: https://www.clementlazzarini.com/sitemap.xml
