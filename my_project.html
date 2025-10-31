@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Mes Projets - Clément Lazzarini | Portfolio Développeur Web</title>
+    
+    <meta name="description" content="Découvrez une sélection de mes réalisations et projets de développement web : applications, sites vitrines, et outils sur mesure.">
+    <link rel="canonical" href="https://www.clementlazzarini.com/projets.html">
+
+    <meta property="og:title" content="Mes Projets - Clément Lazzarini">
+    <meta property="og:description" content="Portfolio de projets web (Django, Python, JavaScript) de Clément Lazzarini.">
+    <meta property="og:image" content="https://www.clementlazzarini.com/assets/image-partage-projets.jpg"> <meta property="og:url" content="https://www.clementlazzarini.com/projets.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mes Projets - Clément Lazzarini">
+    <meta name="twitter:description" content="Portfolio de projets web (Django, Python, JavaScript) de Clément Lazzarini.">
+    <meta name="twitter:image" content="https://www.clementlazzarini.com/assets/image-partage-projets.jpg"> <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="assets/media/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/media/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/media/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Clemlazz" />
+    <link rel="manifest" href="assets/media/favicon/site.webmanifest" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Clément Lazzarini",
+      "url": "https://www.clementlazzarini.com/",
+      "image": "https://www.clementlazzarini.com/assets/media/logowhite-noBG.png",
+      "jobTitle": "Développeur Web",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/clement-lazzarini/",
+        "https://github.com/clementlazzarini/",
+      ],
+      "knowsAbout": ["HTML", "CSS", "JavaScript", "Python", "Django", "UX/UI Design", "SEO"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toulouse",
+        "addressCountry": "FR"
+      }
+    }
+    </script>
+
+    <style>
+        /* ========================
+   Styles pour la page Projets
+   ======================== */
+
+/* Conteneur principal de la page */
+.portfolio-page.container {
+    padding-top: 4rem;    /* Espace pour respirer en haut */
+    padding-bottom: 8rem; /* Espace avant le footer/nav */
+}
+
+.portfolio-page h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem; /* ou la taille de tes h1 */
+}
+
+.portfolio-page .section-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* La grille des projets */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/* Le lien qui englobe la carte */
+.project-card-link {
+    text-decoration: none;
+    color: inherit; /* Hérite la couleur du texte normal */
+    display: block;
+    border-radius: 8px; /* Bords arrondis */
+    overflow: hidden; /* Pour que l'image respecte les bords */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card-link:hover,
+.project-card-link:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+/* L'article à l'intérieur du lien */
+.project-card {
+    background-color: #ffffff; /* Ou la couleur de tes cartes */
+    height: 100%; /* Fait que toutes les cartes ont la même hauteur */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card .card-image {
+    margin: 0;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Format d'image standard */
+    overflow: hidden;
+}
+
+.project-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assure que l'image remplit l'espace */
+}
+
+.project-card .card-content {
+    padding: 1.5rem;
+    flex-grow: 1; /* Permet au contenu de pousser les tags vers le bas */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card .card-content h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-family: 'Exo 2', sans-serif; /* Reprend tes polices */
+}
+
+.project-card .card-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    flex-grow: 1; /* Pousse les tags en bas */
+}
+
+/* Les tags de technologie */
+.tech-tags {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tags li {
+    font-size: 0.8rem;
+    background-color: #f0f0f0; /* Couleur de fond pour les tags */
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+}
+    </style>
+
+</head>
+<body>
+
+    <main class="main-content">
+        <section class="portfolio-page container" id="projets">
+            
+            <h1>Mes Projets</h1>
+            <p class="section-intro">
+                Voici une sélection de projets sur lesquels j'ai travaillé, allant d'applications web complexes 
+                à des sites vitrines optimisés. Chaque projet a été une opportunité d'apprendre et de 
+                transformer une idée en une solution concrète.
+            </p>
+
+            <div class="project-grid">
+
+                <a href="projet-saas-gestion.html" class="project-card-link">
+                    <article class="project-card">
+                        <figure class="card-image">
+                            <img src="assets/media/projets/projet-1-cover.jpg" alt="Aperçu de la plateforme SaaS de gestion">
+                        </figure>
+                        <div class="card-content">
+                            <h3>Plateforme SaaS de Gestion</h3>
+                            <p>Une application web complète pour la gestion de clients et de facturation, développée de A à Z.</p>
+                            <ul class="tech-tags">
+                                <li>Django</li>
+                                <li>React</li>
+                                <li>PostgreSQL</li>
+                                <li>UX/UI</li>
+                            </ul>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="projet-site-ecommerce.html" class="project-card-link">
+                    <article class="project-card">
+                        <figure class="card-image">
+                            <img src="assets/media/projets/projet-2-cover.jpg" alt="Aperçu du site e-commerce GreenLeaf">
+                        </figure>
+                        <div class="card-content">
+                            <h3>Site E-commerce "GreenLeaf"</h3>
+                            <p>Création d'une boutique en ligne sur mesure avec tunnel de paiement sécurisé et interface d'administration.</p>
+                            <ul class="tech-tags">
+                                <li>Python</li>
+                                <li>Django</li>
+                                <li>Stripe API</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="projet-portfolio-photographe.html" class="project-card-link">
+                    <article class="project-card">
+                        <figure class="card-image">
+                            <img src="assets/media/projets/projet-3-cover.jpg" alt="Aperçu du portfolio pour un photographe">
+                        </figure>
+                        <div class="card-content">
+                            <h3>Portfolio "Clara Photographie"</h3>
+                            <p>Site vitrine au design épuré et optimisé pour le SEO, mettant en valeur le travail d'une artiste photographe.</p>
+                            <ul class="tech-tags">
+                                <li>HTML5</li>
+                                <li>CSS (SASS)</li>
+                                <li>SEO</li>
+                                <li>Design</li>
+                            </ul>
+                        </div>
+                    </article>
+                </a>
+                
+                <a href="projet-outil-perso.html" class="project-card-link">
+                    <article class="project-card">
+                        <figure class="card-image">
+                            <img src="assets/media/projets/projet-4-cover.jpg" alt="Aperçu d'un outil personnel">
+                        </figure>
+                        <div class="card-content">
+                            <h3>Outil de Tracking (Perso)</h3>
+                            <p>Un petit projet personnel pour tracker des données via une API, avec une interface simple de data-visualisation.</p>
+                            <ul class="tech-tags">
+                                <li>Python</li>
+                                <li>Flask</li>
+                                <li>Chart.js</li>
+                            </ul>
+                        </div>
+                    </article>
+                </a>
+
+            </div> </section>
+    </main>
+    <footer class="site-footer">
+        <p class="copyright"><a href="mentions-legales.html">Mentions Légales</a></p>
+        <p class="copyright">&copy; 2025 Clément Lazzarini - All rights reserved</p>
+    </footer>
+
+    <nav class="bottom-navbar">
+        <a href="index.html" class="nav-link" aria-label="Accueil">
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </span>
+        </a>
+        <a href="index.html#services" class="nav-link" aria-label="Services">
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </span>
+        </a>
+        <a href="projets.html" class="nav-link active" aria-label="Projets">
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </span>
+        </a>
+        <a href="index.html#contact" class="nav-link" aria-label="Contact">
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </span>
+        </a>
+    </nav>
+
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+</html>
