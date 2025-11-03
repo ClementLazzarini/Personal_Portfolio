@@ -61,13 +61,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // =======================================================
     // 2. Gestion du formulaire de contact avec EmailJS
-    // (Assurez-vous que EmailJS est inclus dans votre HTML)
+    // (avec champ "honeypot" pour réduire le spam)
     // =======================================================
+    const contactForm = document.getElementById('contactForm');
     const formMessages = document.getElementById('form-messages');
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
+    const sendButton = document.querySelector('.send-message-button');
+    contactForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        document.querySelector('.send-message-button').disabled = true;
+        sendButton.disabled = true;
+        formMessages.textContent = 'Envoie en cours...';
+        formMessages.style.color = '#FFA500';
+
+        // ============================================
+        // HONEYPOT CHECK
+        // ============================================
+        const honeypot = document.getElementById('website').value;
+        if (honeypot !== '') {
+            // Si le champ honeypot est rempli, c'est probablement un bot
+            console.warn('Spam détecté via le champ honeypot.');
+            setTimeout(() => {
+                formMessages.textContent = 'Votre message a été envoyé avec succès !';
+                formMessages.style.color = '#4CAF50';
+                contactForm.reset();
+                sendButton.disabled = false;
+            }, 1000); // Simule un délai d'envoi
+
+            return; // Ne pas continuer avec l'envoi réel
+        }
         
         // Récupérer les valeurs des champs du formulaire
         const name = document.getElementById('name').value;
