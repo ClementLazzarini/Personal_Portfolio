@@ -155,7 +155,7 @@ h3 {
 /* =======================================================
    5. Sections Spécifiques à la Page d'Accueil
    ======================================================= */
-header {
+.header {
     min-height: 100vh;
     background: var(--gradient-1);
     display: flex;
@@ -166,20 +166,20 @@ header {
     padding-bottom: var(--spacing-xl); /* Ajout d'un padding en bas pour l'espace */
 }
 
-header .logo{
+.header .logo{
     width: 150px;
     display: block;
     margin: 0 auto;
     padding-top: 20px;
 }
 
-header h1{
+.header h1{
     font-size: 2rem;
     color: var(--light-bg);
     font-weight: bold;
 }
 
-header img{
+.header img{
     width: 300px;
     margin-top: 20px;
 }
@@ -689,9 +689,23 @@ header img{
     color: var(--dark-accent-pink); /* Ou une autre couleur si vous voulez les icônes colorées au survol */
 }
 
+/* =======================================================
+   11. MES PROJETS
+   ======================================================= */
+/* (Voir la section 7 pour les styles spécifiques aux projets) */
+.header-project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+
 
 /* =======================================================
-   11. Media Queries (pour Desktop) - MOBILE FIRST
+   12. Media Queries (pour Desktop) - MOBILE FIRST
    ======================================================= */
 
 /* Styles pour les tablettes et écrans plus grands (min-width: 768px) */

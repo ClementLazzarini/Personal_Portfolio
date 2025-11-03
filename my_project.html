@@ -54,205 +54,118 @@
       }
     }
     </script>
-
-    <style>
-        /* ========================
-   Styles pour la page Projets
-   ======================== */
-
-/* Conteneur principal de la page */
-.portfolio-page.container {
-    padding-top: 4rem;    /* Espace pour respirer en haut */
-    padding-bottom: 8rem; /* Espace avant le footer/nav */
-}
-
-.portfolio-page h1 {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 2.5rem; /* ou la taille de tes h1 */
-}
-
-.portfolio-page .section-intro {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 3rem auto;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-/* La grille des projets */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-}
-
-/* Le lien qui englobe la carte */
-.project-card-link {
-    text-decoration: none;
-    color: inherit; /* Hérite la couleur du texte normal */
-    display: block;
-    border-radius: 8px; /* Bords arrondis */
-    overflow: hidden; /* Pour que l'image respecte les bords */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card-link:hover,
-.project-card-link:focus {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    outline: none;
-}
-
-/* L'article à l'intérieur du lien */
-.project-card {
-    background-color: #ffffff; /* Ou la couleur de tes cartes */
-    height: 100%; /* Fait que toutes les cartes ont la même hauteur */
-    display: flex;
-    flex-direction: column;
-}
-
-.project-card .card-image {
-    margin: 0;
-    width: 100%;
-    aspect-ratio: 16 / 9; /* Format d'image standard */
-    overflow: hidden;
-}
-
-.project-card .card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Assure que l'image remplit l'espace */
-}
-
-.project-card .card-content {
-    padding: 1.5rem;
-    flex-grow: 1; /* Permet au contenu de pousser les tags vers le bas */
-    display: flex;
-    flex-direction: column;
-}
-
-.project-card .card-content h3 {
-    font-size: 1.5rem;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-family: 'Exo 2', sans-serif; /* Reprend tes polices */
-}
-
-.project-card .card-content p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-    flex-grow: 1; /* Pousse les tags en bas */
-}
-
-/* Les tags de technologie */
-.tech-tags {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.tech-tags li {
-    font-size: 0.8rem;
-    background-color: #f0f0f0; /* Couleur de fond pour les tags */
-    padding: 0.25rem 0.75rem;
-    border-radius: 15px;
-}
-    </style>
-
 </head>
 <body>
+    <header class="header-project">
+        <h1>Mes Projets</h1>
+        <p class="section-intro">
+            Voici une sélection de projets sur lesquels j'ai travaillé, allant d'applications web complexes 
+            à des sites vitrines optimisés. Chaque projet a été une opportunité d'apprendre et de 
+            transformer une idée en une solution concrète.
+        </p>
+    </header>
 
     <main class="main-content">
-        <section class="portfolio-page container" id="projets">
-            
-            <h1>Mes Projets</h1>
-            <p class="section-intro">
-                Voici une sélection de projets sur lesquels j'ai travaillé, allant d'applications web complexes 
-                à des sites vitrines optimisés. Chaque projet a été une opportunité d'apprendre et de 
-                transformer une idée en une solution concrète.
-            </p>
-
-            <div class="project-grid">
-
-                <a href="projet-saas-gestion.html" class="project-card-link">
-                    <article class="project-card">
-                        <figure class="card-image">
-                            <img src="assets/media/projets/projet-1-cover.jpg" alt="Aperçu de la plateforme SaaS de gestion">
-                        </figure>
-                        <div class="card-content">
-                            <h3>Plateforme SaaS de Gestion</h3>
-                            <p>Une application web complète pour la gestion de clients et de facturation, développée de A à Z.</p>
-                            <ul class="tech-tags">
-                                <li>Django</li>
-                                <li>React</li>
-                                <li>PostgreSQL</li>
-                                <li>UX/UI</li>
-                            </ul>
-                        </div>
-                    </article>
-                </a>
-
-                <a href="projet-site-ecommerce.html" class="project-card-link">
-                    <article class="project-card">
-                        <figure class="card-image">
-                            <img src="assets/media/projets/projet-2-cover.jpg" alt="Aperçu du site e-commerce GreenLeaf">
-                        </figure>
-                        <div class="card-content">
-                            <h3>Site E-commerce "GreenLeaf"</h3>
-                            <p>Création d'une boutique en ligne sur mesure avec tunnel de paiement sécurisé et interface d'administration.</p>
-                            <ul class="tech-tags">
-                                <li>Python</li>
-                                <li>Django</li>
-                                <li>Stripe API</li>
-                                <li>JavaScript</li>
-                            </ul>
-                        </div>
-                    </article>
-                </a>
-
-                <a href="projet-portfolio-photographe.html" class="project-card-link">
-                    <article class="project-card">
-                        <figure class="card-image">
-                            <img src="assets/media/projets/projet-3-cover.jpg" alt="Aperçu du portfolio pour un photographe">
-                        </figure>
-                        <div class="card-content">
-                            <h3>Portfolio "Clara Photographie"</h3>
-                            <p>Site vitrine au design épuré et optimisé pour le SEO, mettant en valeur le travail d'une artiste photographe.</p>
-                            <ul class="tech-tags">
-                                <li>HTML5</li>
-                                <li>CSS (SASS)</li>
-                                <li>SEO</li>
-                                <li>Design</li>
-                            </ul>
-                        </div>
-                    </article>
-                </a>
-                
-                <a href="projet-outil-perso.html" class="project-card-link">
-                    <article class="project-card">
-                        <figure class="card-image">
-                            <img src="assets/media/projets/projet-4-cover.jpg" alt="Aperçu d'un outil personnel">
-                        </figure>
-                        <div class="card-content">
-                            <h3>Outil de Tracking (Perso)</h3>
-                            <p>Un petit projet personnel pour tracker des données via une API, avec une interface simple de data-visualisation.</p>
-                            <ul class="tech-tags">
-                                <li>Python</li>
-                                <li>Flask</li>
-                                <li>Chart.js</li>
-                            </ul>
-                        </div>
-                    </article>
-                </a>
-
-            </div> </section>
+        <section id="projets">
+            <article class="project-card">
+                <img src="assets/media/projectumami.jpeg" alt="Aperçu du projet Umami restaurant">
+                <h3>Site web – Restaurant Umami</h3>
+                <p>
+                    Développement d’un site clair et responsive pour un restaurant asiatique. 
+                    L’objectif : présenter le menu, les photos et les horaires tout en facilitant les réservations depuis mobile.
+                </p>
+                <div class="tags-container">
+                    <p>#HTML</p>
+                    <p>#CSS</p>
+                    <p>#Javascript</p>
+                    <p>#Python</p>
+                    <p>#Django</p>
+                </div>
+                <a href="https://clemlazztech.pythonanywhere.com/" target="_blank">[ VISITER LE SITE ]</a>
+            </article>
+            <article class="project-card">
+                <img src="assets/media/projectumami.jpeg" alt="Aperçu du projet Umami restaurant">
+                <h3>Site web – Restaurant Umami</h3>
+                <p>
+                    Développement d’un site clair et responsive pour un restaurant asiatique. 
+                    L’objectif : présenter le menu, les photos et les horaires tout en facilitant les réservations depuis mobile.
+                </p>
+                <div class="tags-container">
+                    <p>#HTML</p>
+                    <p>#CSS</p>
+                    <p>#Javascript</p>
+                    <p>#Python</p>
+                    <p>#Django</p>
+                </div>
+                <a href="https://clemlazztech.pythonanywhere.com/" target="_blank">[ VISITER LE SITE ]</a>
+            </article>
+            <article class="project-card">
+                <img src="assets/media/projectumami.jpeg" alt="Aperçu du projet Umami restaurant">
+                <h3>Site web – Restaurant Umami</h3>
+                <p>
+                    Développement d’un site clair et responsive pour un restaurant asiatique. 
+                    L’objectif : présenter le menu, les photos et les horaires tout en facilitant les réservations depuis mobile.
+                </p>
+                <div class="tags-container">
+                    <p>#HTML</p>
+                    <p>#CSS</p>
+                    <p>#Javascript</p>
+                    <p>#Python</p>
+                    <p>#Django</p>
+                </div>
+                <a href="https://clemlazztech.pythonanywhere.com/" target="_blank">[ VISITER LE SITE ]</a>
+            </article>
+            <article class="project-card">
+                <img src="assets/media/projectumami.jpeg" alt="Aperçu du projet Umami restaurant">
+                <h3>Site web – Restaurant Umami</h3>
+                <p>
+                    Développement d’un site clair et responsive pour un restaurant asiatique. 
+                    L’objectif : présenter le menu, les photos et les horaires tout en facilitant les réservations depuis mobile.
+                </p>
+                <div class="tags-container">
+                    <p>#HTML</p>
+                    <p>#CSS</p>
+                    <p>#Javascript</p>
+                    <p>#Python</p>
+                    <p>#Django</p>
+                </div>
+                <a href="https://clemlazztech.pythonanywhere.com/" target="_blank">[ VISITER LE SITE ]</a>
+            </article>
+            <article class="project-card">
+                <img src="assets/media/projectumami.jpeg" alt="Aperçu du projet Umami restaurant">
+                <h3>Site web – Restaurant Umami</h3>
+                <p>
+                    Développement d’un site clair et responsive pour un restaurant asiatique. 
+                    L’objectif : présenter le menu, les photos et les horaires tout en facilitant les réservations depuis mobile.
+                </p>
+                <div class="tags-container">
+                    <p>#HTML</p>
+                    <p>#CSS</p>
+                    <p>#Javascript</p>
+                    <p>#Python</p>
+                    <p>#Django</p>
+                </div>
+                <a href="https://clemlazztech.pythonanywhere.com/" target="_blank">[ VISITER LE SITE ]</a>
+            </article>
+            <article class="project-card">
+                <img src="assets/media/projectumami.jpeg" alt="Aperçu du projet Umami restaurant">
+                <h3>Site web – Restaurant Umami</h3>
+                <p>
+                    Développement d’un site clair et responsive pour un restaurant asiatique. 
+                    L’objectif : présenter le menu, les photos et les horaires tout en facilitant les réservations depuis mobile.
+                </p>
+                <div class="tags-container">
+                    <p>#HTML</p>
+                    <p>#CSS</p>
+                    <p>#Javascript</p>
+                    <p>#Python</p>
+                    <p>#Django</p>
+                </div>
+                <a href="https://clemlazztech.pythonanywhere.com/" target="_blank">[ VISITER LE SITE ]</a>
+            </article>
+        </section>
     </main>
+
     <footer class="site-footer">
         <p class="copyright"><a href="mentions-legales.html">Mentions Légales</a></p>
         <p class="copyright">&copy; 2025 Clément Lazzarini - All rights reserved</p>
@@ -264,26 +177,12 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
             </span>
         </a>
-        <a href="index.html#services" class="nav-link" aria-label="Services">
-            <span class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-            </span>
-        </a>
-        <a href="projets.html" class="nav-link active" aria-label="Projets">
-            <span class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-            </span>
-        </a>
-        <a href="index.html#contact" class="nav-link" aria-label="Contact">
-            <span class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-            </span>
-        </a>
     </nav>
 
     <script type="text/javascript"
             src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
+
     <script src="assets/js/script.min.js"></script>
 </body>
 </html>
