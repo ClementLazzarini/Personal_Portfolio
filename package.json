@@ -1,0 +1,24 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "![Portfolio de Clément Lazzarini](https://github.com/ClementLazzarini/Personal_Portfolio/assets/66817296/cc349dcd-6590-449e-ba23-a5c9f564d62f)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClementLazzarini/Personal_Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ClementLazzarini/Personal_Portfolio/issues"
+  },
+  "homepage": "https://github.com/ClementLazzarini/Personal_Portfolio#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
