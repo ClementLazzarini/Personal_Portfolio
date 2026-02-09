@@ -8,6 +8,3 @@ npm-debug.log
 # Fichiers de configuration IDE (optionnel mais propre)
 .vscode/
 .idea/
-
-# Si tu as créé le dossier src pour le CSS input, tu peux le garder, 
-# mais on garde le fichier assets/css/style.css généré pour que ça marche en prod direct.
