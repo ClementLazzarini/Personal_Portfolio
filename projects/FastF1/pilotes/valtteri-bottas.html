@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Valtteri Bottas | Pilote Alpha Roméo | F1 2024</title>
+        <meta charset="UTF-8">
+        <meta name="Content-Language" content="fr">
+    
+        <meta name="Description" content="Retrouvez toute la Formule 1 et ses principales informations en moins de 3 clics ! LE site de Formule 1 Français, créé par un passionné, pour les passionnés !">
+        <meta name="Keywords" content="Formule 1, Alfa Roméo, Valtteri Bottas, 2024">
+    
+        <meta name="Copyright" content="Clément Lazzarini">
+        <meta name="Author" content="Clément Lazzarini">
+        <meta name="Publisher" content="Clément Lazzarini">
+        <meta name="Revisit-After" content="7 days">
+        <meta name="Robots" content="all">
+        <meta name="Rating" content="general">
+        <meta name="Distribution" content="global">
+    
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../stylev2.css">
+        <link rel="shortcut icon" href="/img/logos/favicon.png" type="icon">
+
+        <script type="text/javascript" src="/js/navbar.js"></script>
+        <script type="text/javascript" src="/js/raceCount.js"></script>
+        <script type="text/javascript" src="/js/calculateAge.js"></script>
+    </head>
+
+<body>
+    <header>
+        <nav class="navbar dark-mode">
+            <div></div>
+            <a href="../index.html"  class="navbar__logo"><div class="title"><img src="../img/logos/logo-fastf1.png" alt="Logo Fast F1" class="logo-fast"></div></a>    
+            <ul class="navbar__links">
+                <li class="navbar__link first"><a href="../index.html">Accueil</a></li>
+                <li class="navbar__link second"><a href="../articles/article.html">Actus</a></li>
+                <li class="navbar__link third"><a href="../calendrier/calendrier.html">Calendrier</a></li>
+                <li class="navbar__link four"><a href="../classements/classements.html">Classements</a></li>
+                <li class="navbar__link fifth"><a href="../pilotes/pilotes.html">Pilotes</a></li>
+                <li class="navbar__link six"><a href="../constructeurs/constructeurs.html">Constructeurs</a></li>
+                <li class="navbar__link seven"><a href="../archives/archives.html">Saisons Précédentes</a></li>
+              </ul>   
+            <button class="burger">
+              <span class="bar"></span>  
+            </button>   
+          </nav>
+    </header>
+    <main class="main-desc-pilotes">
+        <div class="first-pilote">
+            <div class="pilote-profile">
+                <img src="../img/pilotes/valtteri-profile.png" alt="Valtteri Bottas" class="pilote-profile">
+                <img  class="pilote-nb-bg" src="../img/pilotes/valtteri-number.png" alt="Numéro de Valtteri Bottas">
+            </div>
+            <div class="name-pilote">
+                <h1>Valtteri Bottas</h1>
+                <p id="basenbcourse" style="visibility: hidden; display: none;">222</p>
+                <p id="baseAge" style="visibility: hidden; display: none;">1989-08-28</p>
+                <img src="../img/flag/finlande-flag.jpeg" alt="Drapeau de la Finlande" class="pilote-flag">
+            </div>
+        </div>
+        <div class="second-pilote">
+            <div class="first-second-pilote">
+                <div class="first-second-pilote-img"></div>
+                <p>10<br>Victoires</p>
+            </div>
+            <div class="second-second-pilote">
+                <div class="second-second-pilote-img"></div>
+                <p>0x<br>Champion du Monde</p>
+            </div>
+            <div class="third-second-pilote">
+                <div class="third-second-pilote-img"></div>
+                <p>20<br>Pole</p>
+            </div>
+        </div>
+        <div class="third-pilote">
+            <div class="first-third-pilote">
+                <h2>Informations</h2>
+                <ul>
+                    <li><p>Age</p><p id="age"></p></li>
+                    <li><p>Années d'activitées</p><p>Depuis 2013</p></li>
+                    <li><p>Nombre de courses</p><p id="racecount"></p></li>
+                    <li><p>Nombre de pole</p><p>20</p></li>
+                    <li><p>Nombre de podiums</p><p>67</p></li>
+                    <li><p>Nombre de victoires</p><p>10</p></li>
+                    <li><p>Champion du monde</p><p>0</p></li>
+                </ul>
+            </div>
+            <div class="second-third-pilote">
+                <h2>Parcours</h2>
+                <ul>
+                    <li><p>Williams</p><p>2012 - 2016</p></li>
+                    <li><p>Mercedes</p><p>2017 - 2022</p></li>
+                    <li><p>Alfa Roméo</p><p>2022 - Aujourd'hui</p></li>
+                </ul>
+            </div>
+            <div class="third-third-pilote">
+                <h2>Châssis & Moteur</h2>
+                <ul>
+                    <li><p>Alfa Romeo C43</p></li>
+                    <li><p>Ferrari Tipo 066/10</p></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <a href="../help.html">Aides</a>
+        <a href="../mentions-legales.html">Mentions Légales</a>
+    </footer>
+    <script>
+        toggleMenu();
+        getRaceCount();
+        calculateAge();
+    </script>
+</body>
+</html>

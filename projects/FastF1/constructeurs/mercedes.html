@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Mercedes | Hamilton - Russell | F1 2024</title>
+        <meta charset="UTF-8">
+        <meta name="Content-Language" content="fr">
+    
+        <meta name="Description" content="Retrouvez toute la Formule 1 et ses principales informations en moins de 3 clics ! LE site de Formule 1 Français, créé par un passionné, pour les passionnés !">
+        <meta name="Keywords" content="Formule 1, Mercedes, Lewis Hamilton, George Russell, 2024, Pilotes">
+    
+        <meta name="Copyright" content="Clément Lazzarini">
+        <meta name="Author" content="Clément Lazzarini">
+        <meta name="Publisher" content="Clément Lazzarini">
+        <meta name="Revisit-After" content="7 days">
+        <meta name="Robots" content="all">
+        <meta name="Rating" content="general">
+        <meta name="Distribution" content="global">
+    
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../stylev2.css">
+        <link rel="shortcut icon" href="/img/logos/favicon.png" type="icon">
+ 
+    
+        <script type="text/javascript" src="/js/navbar.js"></script>
+        <script type="text/javascript" src="/js/raceCount.js"></script>
+    </head>
+
+<body>
+    <header>
+        <nav class="navbar dark-mode">
+            <div></div>
+            <a href="../index.html"  class="navbar__logo"><div class="title"><img src="../img/logos/logo-fastf1.png" alt="Logo Fast F1" class="logo-fast"></div></a>    
+            <ul class="navbar__links">
+                <li class="navbar__link first"><a href="../index.html">Accueil</a></li>
+                <li class="navbar__link second"><a href="../articles/article.html">Actus</a></li>
+                <li class="navbar__link third"><a href="../calendrier/calendrier.html">Calendrier</a></li>
+                <li class="navbar__link four"><a href="../classements/classements.html">Classements</a></li>
+                <li class="navbar__link fifth"><a href="../pilotes/pilotes.html">Pilotes</a></li>
+                <li class="navbar__link six"><a href="../constructeurs/constructeurs.html">Constructeurs</a></li>
+                <li class="navbar__link seven"><a href="../archives/archives.html">Saisons Précédentes</a></li>
+              </ul>   
+            <button class="burger">
+              <span class="bar"></span>  
+            </button>   
+          </nav>
+    </header>
+    <main class="main-desc-pilotes">
+        <div class="first-pilote">
+            <img src="../img/constructeurs/mercedes-logo.jpeg" alt="mercedes" class="cons-profile">
+            <div class="name-pilote">
+                <h1>Mercedes</h1>
+                <p id="basenbcourse" style="visibility: hidden; display: none;">293</p>
+                <img src="../img/flag/allemagne-flag.png" alt="Drapeau de l'Allemagne" class="pilote-flag">
+            </div>
+        </div>
+        <div class="second-pilote">
+            <div class="first-second-pilote">
+                <div class="first-second-pilote-img"></div>
+                <p>125<br>Victoires</p>
+            </div>
+            <div class="second-second-pilote">
+                <div class="second-second-pilote-img"></div>
+                <p>8x<br>Titres constructeurs</p>
+            </div>
+            <div class="third-second-pilote">
+                <div class="third-second-pilote-img"></div>
+                <p>137<br>Pole Position</p>
+            </div>
+        </div>
+        <div class="third-pilote">
+            <div class="first-third-pilote">
+                <h2>Informations</h2>
+                <ul>
+                    <li><p>Localisation</p><p>Brackley</p></li>
+                    <li><p>Directeur</p><p>Toto Wolff</p></li>
+                    <li><p>Nombre de courses</p><p id="racecount"></p></li>
+                    <li><p>Nombre de pole</p><p>137</p></li>
+                    <li><p>Nombre de podiums</p><p>289</p></li>
+                    <li><p>Nombre de victoires</p><p>125</p></li>
+                    <li><p>Titres constructeurs</p><p>8</p></li>
+                </ul>
+            </div>
+            <div class="second-third-pilote">
+                <h2>Pilotes</h2>
+                <ul>
+                    <li><p><a href="../pilotes/lewis-hamilton.html">44. Lewis Hamilton</a></p><p>Royaume-Uni</p></li>
+                    <li><p><a href="../pilotes/george-russell.html">63. Georges Russell</a></p><p>Royaume-Uni</p></li>
+                </ul>
+            </div>
+            <div class="third-third-pilote">
+                <h2>Châssis & Moteur</h2>
+                <ul>
+                    <li><p>Mercedes-AMG F1 W15 E Performance</p></li>
+                    <li><p>Mercedes M15 E Performance</p></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Créé par Clément Lazzarini</p>
+        <a href="#">Help & Infos</a>
+    </footer>
+    <script>
+        getRaceCount();
+        toggleMenu();
+    </script>
+</body>
+</html>

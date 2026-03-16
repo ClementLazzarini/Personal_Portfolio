@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Help Fast F1</title>
+    <meta charset="UTF-8">
+    <meta name="Content-Language" content="fr">
+
+    <meta name="Description" content="Retrouvez toute la Formule 1 et ses principales informations en moins de 3 clics ! LE site de Formule 1 Français, créé par un passionné, pour les passionnés !">
+    <meta name="Keywords" content="Formule 1, Aide FastF1, Help">
+
+    <meta name="Copyright" content="Clément Lazzarini">
+    <meta name="Author" content="Clément Lazzarini">
+    <meta name="Publisher" content="Clément Lazzarini">
+    <meta name="Revisit-After" content="7 days">
+    <meta name="Robots" content="all">
+    <meta name="Rating" content="general">
+    <meta name="Distribution" content="global">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylev2.css">
+    <link rel="shortcut icon" href="/img/logos/favicon.png" type="icon">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar dark-mode">
+            <div></div>
+            <a href="index.html"  class="navbar__logo"><div class="title"><img src="img/logos/logo-fastf1.png" alt="Logo Fast F1" class="logo-fast"></div></a>    
+            <ul class="navbar__links">
+                <li class="navbar__link first"><a href="index.html">Accueil</a></li>
+                <li class="navbar__link second"><a href="articles/article.html">Actus</a></li>
+                <li class="navbar__link third"><a href="calendrier/calendrier.html">Calendrier</a></li>
+                <li class="navbar__link four"><a href="classements/classements.html">Classements</a></li>
+                <li class="navbar__link fifth"><a href="pilotes/pilotes.html">Pilotes</a></li>
+                <li class="navbar__link six"><a href="constructeurs/constructeurs.html">Constructeurs</a></li>
+                <li class="navbar__link seven"><a href="archives/archives.html">Saisons Précédentes</a></li>
+                </ul>   
+            <button class="burger">
+                <span class="bar"></span>  
+            </button>   
+            </nav>
+    </header>
+    <main class="help">
+        <h2>Présentation du site</h2>
+        <p>Le but de ce site est très simple : avoir l'ensemble des informations sur la Formule 1 en moins de 3 clics ! LE site de Formule 1 Français, créé par un passionné, pour les passionnés !</p>
+
+        <h2>F.A.Q</h2>
+
+        <h3>Quand sont mis à jour les informations ?</h3>
+        <p>Une très grande partie des informations sont mis à jour de manière automatique. Pour ce qui est des résumés de Grand Prix, ils sont publiés maximum 24h après chaque course.</p>
+
+        <h3>Merci Ergast F1 !</h3>
+        <p>Lors de la première version de ce site, toutes les statistiques étaient tenues à jour à la main ce qui prenait beaucoup de temps. Mais l'API de <a target="_blank" href="https://ergast.com/mrd/">Ergast F1</a> a permis d'avoir des informations à jour en automatique. Un grand merci à Ergast.</p>
+
+        <h3>Droits d'auteurs</h3>
+        <p>L'ensemble des images de ce site internet proviennent du site <a target="_blank" href="https://www.formula1.com/">https://www.formula1.com/</a>. Tout les droits leurs reviennent.<br>Pour ce qui est des textes, ils ont tous été écrit par mes soins.</p>
+        <h2>Me contacter</h2>
+        <div class="help-logo-container">
+            <a href="https://www.instagram.com/fastf1fr/" class="help-logo"><img src="img/logos/instagram.png" alt="Instagram"></a>
+            <a href="https://www.tiktok.com/@fastf1.fr" class="help-logo"><img src="img/logos/tik-tok.png" alt="TikTok"></a>
+            <a href="https://twitter.com/FastF1fr" class="help-logo"><img src="img/logos/twitter.png" alt="Twitter"></a>
+            <a href="mailto:contact.fastf1@gmail.com" class="help-logo"><img src="img/logos/enveloppe.png" alt="Email"></a>
+        </div>
+    </main>
+    <footer>
+        <a href="help.html">Aides</a>
+        <a href="mentions-legales.html">Mentions Légales</a>
+    </footer>
+
+    <script defer>
+        function toggleMenu () {  
+          const navbar = document.querySelector('.navbar');
+          const burger = document.querySelector('.burger');
+          burger.addEventListener('click', (e) => {    
+          navbar.classList.toggle('show-nav');
+          });    
+        }
+        toggleMenu();
+      </script>
+</body>
+</html>

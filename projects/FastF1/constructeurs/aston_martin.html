@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Aston Martin | Alonso - Stroll | F1 2024</title>
+        <meta charset="UTF-8">
+        <meta name="Content-Language" content="fr">
+    
+        <meta name="Description" content="Retrouvez toute la Formule 1 et ses principales informations en moins de 3 clics ! LE site de Formule 1 Français, créé par un passionné, pour les passionnés !">
+        <meta name="Keywords" content="Formule 1, Aston Martin, Fernando Alonso, 2024, Pilotes">
+    
+        <meta name="Copyright" content="Clément Lazzarini">
+        <meta name="Author" content="Clément Lazzarini">
+        <meta name="Publisher" content="Clément Lazzarini">
+        <meta name="Revisit-After" content="7 days">
+        <meta name="Robots" content="all">
+        <meta name="Rating" content="general">
+        <meta name="Distribution" content="global">
+    
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../stylev2.css">
+        <link rel="shortcut icon" href="/img/logos/favicon.png" type="icon">
+ 
+    
+        <script type="text/javascript" src="/js/navbar.js"></script>
+        <script type="text/javascript" src="/js/raceCount.js"></script>
+    </head>
+
+<body>
+    <header>
+        <nav class="navbar dark-mode">
+            <div></div>
+            <a href="../index.html"  class="navbar__logo"><div class="title"><img src="../img/logos/logo-fastf1.png" alt="Logo Fast F1" class="logo-fast"></div></a>    
+            <ul class="navbar__links">
+                <li class="navbar__link first"><a href="../index.html">Accueil</a></li>
+                <li class="navbar__link second"><a href="../articles/article.html">Actus</a></li>
+                <li class="navbar__link third"><a href="../calendrier/calendrier.html">Calendrier</a></li>
+                <li class="navbar__link four"><a href="../classements/classements.html">Classements</a></li>
+                <li class="navbar__link fifth"><a href="../pilotes/pilotes.html">Pilotes</a></li>
+                <li class="navbar__link six"><a href="../constructeurs/constructeurs.html">Constructeurs</a></li>
+                <li class="navbar__link seven"><a href="../archives/archives.html">Saisons Précédentes</a></li>
+              </ul>   
+            <button class="burger">
+              <span class="bar"></span>  
+            </button>   
+          </nav>
+    </header>
+    <main class="main-desc-pilotes">
+        <div class="first-pilote">
+            <img src="../img/constructeurs/aston_martin-logo.jpeg" alt="Aston martin" class="cons-profile">
+            <div class="name-pilote">
+                <h1>Aston Martin</h1>
+                <p id="basenbcourse" style="visibility: hidden; display: none;">49</p>
+                <img src="../img/flag/angleterre-flag.png" alt="Drapeau du Royaume-Unis" class="pilote-flag">
+            </div>
+        </div>
+        <div class="second-pilote">
+            <div class="first-second-pilote">
+                <div class="first-second-pilote-img"></div>
+                <p>0<br>Victoires</p>
+            </div>
+            <div class="second-second-pilote">
+                <div class="second-second-pilote-img"></div>
+                <p>0x<br>Titres constructeurs</p>
+            </div>
+            <div class="third-second-pilote">
+                <div class="third-second-pilote-img"></div>
+                <p>0<br>Pole Position</p>
+            </div>
+        </div>
+        <div class="third-pilote">
+            <div class="first-third-pilote">
+                <h2>Informations</h2>
+                <ul>
+                    <li><p>Localisation</p><p>Silverstone</p></li>
+                    <li><p>Directeur</p><p>Mike Krack</p></li>
+                    <li><p>Nombre de courses</p><p id="racecount"></p></li>
+                    <li><p>Nombre de pole</p><p>0</p></li>
+                    <li><p>Nombre de podiums</p><p>9</p></li>
+                    <li><p>Nombre de victoires</p><p>0</p></li>
+                    <li><p>Titres constructeurs</p><p>0</p></li>
+                </ul>
+            </div>
+            <div class="second-third-pilote">
+                <h2>Pilotes</h2>
+                <ul>
+                    <li><p><a href="../pilotes/fernando-alonso.html">14. Fernando Alonso</a></p><p>Espagne</p></li>
+                    <li><p><a href="../pilotes/lance-stroll.html">18. Lance Stroll</a></p><p>Canada</p></li>
+                </ul>
+            </div>
+            <div class="third-third-pilote">
+                <h2>Châssis & Moteur</h2>
+                <ul>
+                    <li><p>Aston Martin AMR 24</p></li>
+                    <li><p>Mercedes M15 E Performance</p></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <a href="../help.html">Aides</a>
+        <a href="../mentions-legales.html">Mentions Légales</a>
+    </footer>
+    <script>
+        getRaceCount();
+        toggleMenu();
+    </script>
+</body>
+</html>
